@@ -1,0 +1,19 @@
+{
+  "name": "benoitvincent_3_21012021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benlinux1/BenoitVINCENT_3_21012021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benlinux1/BenoitVINCENT_3_21012021/issues"
+  },
+  "homepage": "https://github.com/benlinux1/BenoitVINCENT_3_21012021#readme"
+}
