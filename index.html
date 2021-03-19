@@ -32,9 +32,7 @@
 
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélcetionnés par nos soins</p>
-                <a href="#restaurants" title="restaurants">
-                    <button type="search">Explorer nos restaurants</button>
-                </a>
+                <button type="submit" form="city" value="city">Explorer nos restaurants</button>
             </section>
 
             <!-- Section Fonctionnement-->
@@ -43,17 +41,17 @@
                 <ul class="method__list">
                     <!-- Choose a restaurant -->
                     <li>Choisissez un restaurant
-                        <img class="number" src="" alt="step1">
+                        <p class="number" src="" alt="step1">1</p>
                         <img class="icon" src="./images/icons/mobile.svg" alt="choose_restaurant">
                     </li>
                     <!-- Choose a menu -->
                     <li>Composez votre menu
-                        <img class="number" src="" alt="step2">
+                        <p class="number" src="" alt="step2">2</p>
                         <img class="icon" src="./images/icons/list.svg" alt="choose_menu">
                     </li>
                     <!-- Enjoy -->
                     <li>Dégustez au restaurant
-                        <img class="number" src="" alt="step2">
+                        <p class="number" src="" alt="step3">3</p>
                         <img class="icon" src="./images/icons/store.svg" alt="enjoy">
                     </li>
                 </ul>
@@ -69,10 +67,9 @@
                     <div class="restaurants__vignette">
                         <figure title="La_palette_du_gout">
                             <img src="./images/restaurants/la_palette_du_gout.jpg" alt="restaurant_la_palette_du_gout_paris">
-                            <figcaption>La palette du goût</figcaption>
-                            <p class="secteur">Ménilmontant</p>
-                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                            <figcaption>La palette du goût<br />Ménilmontant</figcaption>
                         </figure>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
                 <!-- Restaurant 2 -->
@@ -80,10 +77,9 @@
                     <div class="restaurants__vignette">
                         <figure title="La note enchantee">
                             <img src="./images/restaurants/la_note_enchantee.jpg" alt="restaurant_la_note_enchantee_paris">
-                            <figcaption>La note enchantée</figcaption>
-                            <p class="secteur">Charonne</p>
-                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                            <figcaption>La note enchantée<br />Charonne</figcaption>
                         </figure>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
                 <!-- Restaurant 3 -->
@@ -91,10 +87,9 @@
                     <div class="restaurants__vignette">
                         <figure title="&Agrave; la Française">
                             <img src="./images/restaurants/a_la_francaise.jpg" alt="restaurant_a_la_francaise_paris">
-                            <figcaption>&Agrave; la française</figcaption>
-                            <p class="secteur">Cité Rouge</p>
-                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                            <figcaption>&Agrave; la française<br />Cité Rouge</figcaption>
                         </figure>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
                 <!-- Restaurant 4 -->
@@ -116,20 +111,21 @@
                 </div>
                 <ul>
                     <!-- Proposer un restaurant -->
-                    <a href="">
-                        <li><img src="./images/icons/utensils.svg" alt="fork_knife">Proposer un restaurant</li>
-                    </a>
+                    <li>
+                        <a href="">
+                            <img src="./images/icons/utensils.svg" alt="fork_knife">Proposer un restaurant
+                        </a>
+                    </li>
 
-                    <a href="">
-                        <li><img src="./images/icons/hands-helping.svg" alt="partnership">Devenir propriétaire</li>
-                    </a>
+                    <li>
+                        <a href="">
+                            <img src="./images/icons/hands-helping.svg" alt="partnership">Devenir propriétaire
+                        </a>
+                    </li>
 
-                    <a href="">
-                        <li>Mentions légales</li>
-                    </a>
-                    <a href="">
-                        <li>Contact</li>
-                    </a>
+                    <li><a href="">Mentions légales</a></li>
+                    
+                    <li><a href="">Contact</a></li>
                 </ul>
 
             </footer>
