@@ -10,8 +10,113 @@
 
     <body>
 
+        <div id="bloc_page">
+  
+            <!-- Header -->
+            <header class="header">
+                <div class="header__logo">
+                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+                    <button class="btn-return"></button>
+                </div>
+            </header>
 
-        
+            <!-- Search Section -->
+            <section class="search">
+                <div>
+                    <img src="./images/icons/position.svg" alt="city_search">
+                </div>
+                <form class="search__form" method="post" id="city" action="ville.php">
+                    <label for="City"></label>
+                    <input type="search" id="City" name="City" placeholder="Paris, Belleville" autofocus/>
+                </form>
 
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélcetionnés par nos soins</p>
+                <a href="#restaurants" title="restaurants">
+                    <button type="search">Explorer nos restaurants</button>
+                </a>
+            </section>
+
+            <!-- Search Section -->
+            <section class="method">
+                <h2>Fonctionnement</h2>
+                <ul class="method__list">
+                    <!-- Choose a restaurant -->
+                    <li>Choisissez un restaurant
+                        <img class="number" src="" alt="step1">
+                        <img class="icon" src="./images/icons/mobile.svg" alt="choose_restaurant">
+                    </li>
+                    <!-- Choose a menu -->
+                    <li>Composez votre menu
+                        <img class="number" src="" alt="step2">
+                        <img class="icon" src="./images/icons/list.svg" alt="choose_menu">
+                    </li>
+                    <!-- Enjoy -->
+                    <li>Dégustez au restaurant
+                        <img class="number" src="" alt="step2">
+                        <img class="icon" src="./images/icons/store.svg" alt="enjoy">
+                    </li>
+                </ul>
+            </section>
+
+
+
+            <!-- Main Section : all restaurants-->
+            <main id="restaurants">
+                <h2>Restaurants</h2>
+                <!-- Restaurant 1 -->
+                <a href="page1.html">
+                    <div class="restaurants__vignette">
+                        <figure title="La_palette_du_gout">
+                            <img src="./images/restaurants/la_palette_du_gout.jpg" alt="restaurant_la_palette_du_gout_paris">
+                            <figcaption>La palette du goût</figcaption>
+                            <p class="secteur">Ménilmontant</p>
+                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                        </figure>
+                    </div>
+                </a>
+                <!-- Restaurant 2 -->
+                <a href="page2.html">
+                    <div class="restaurants__vignette">
+                        <figure title="La note enchantee">
+                            <img src="./images/restaurants/la_note_enchantee.jpg" alt="restaurant_la_note_enchantee_paris">
+                            <figcaption>La note enchantée</figcaption>
+                            <p class="secteur">Charonne</p>
+                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                        </figure>
+                    </div>
+                </a>
+                <!-- Restaurant 3 -->
+                <a href="page3.html">
+                    <div class="restaurants__vignette">
+                        <figure title="&Agrave; la Française">
+                            <img src="./images/restaurants/a_la_francaise.jpg" alt="restaurant_a_la_francaise_paris">
+                            <figcaption>&Agrave; la française</figcaption>
+                            <p class="secteur">Cité Rouge</p>
+                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                        </figure>
+                    </div>
+                </a>
+                <!-- Restaurant 3 -->
+                <a href="page4.html">
+                    <div class="restaurants__vignette">
+                        <figure title="Le delice des sens">
+                            <img src="./images/restaurants/le_delice_des_sens.jpg" alt="restaurant_le_delice_des_sens_paris">
+                            <figcaption>Le délice des sens</figcaption>
+                            <p class="secteur">Folie-Méricourt</p>
+                            <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
+                        </figure>
+                    </div>
+                </a>
+            </main>
+            <footer>
+                <div class="footer__logo">
+                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood_footer">
+                </div>
+
+            </footer>
+
+
+        </div>
     </body>
 </html>
