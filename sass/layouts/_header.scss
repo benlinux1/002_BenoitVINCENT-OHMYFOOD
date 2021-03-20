@@ -1,0 +1,25 @@
+.header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__logo + button
+{
+    align-self: flex-start;
+}
+
+.btn-return {
+    width: 20px;
+    height: 20px;
+    outline: none;
+    background: url("/images/icons/arrow-left.svg") no-repeat;
+    border: none;
+    position: absolute;
+    left: 10px;
+}

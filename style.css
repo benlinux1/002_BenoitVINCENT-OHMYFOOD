@@ -1,21 +1,183 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - ./sass/main.scss
+/* shrikhand-regular */
+@font-face {
+  font-family: 'Shrikhand';
+  font-weight: bold;
+  src: url(fonts/shrikhand/shrikhand-regular.eot) format("embedded-opentype"), url(fonts/shrikhand/shrikhand-regular.woff2) format("woff2"), url(fonts/shrikhand/shrikhand-regular.woff) format("woff"), url(fonts/shrikhand/shrikhand-regular.ttf) format("truetype"), url(fonts/shrikhand/shrikhand-regular.svg) format("svg");
+  /* Legacy iOS */ }
+/* roboto-regular */
+@font-face {
+  font-family: 'roboto';
+  src: url(fonts/roboto/roboto-500.eot) format("embedded-opentype"), url(fonts/roboto/roboto-500.woff2) format("woff2"), url(fonts/roboto/roboto-500.woff) format("woff"), url(fonts/roboto/roboto-500.ttf) format("truetype"), url(fonts/roboto/roboto-500.svg) format("svg");
+  /* Legacy iOS */ }
+@font-face {
+  font-family: 'roboto-light';
+  src: url(fonts/roboto/roboto-300.eot) format("embedded-opentype"), url(fonts/roboto/roboto-300.woff2) format("woff2"), url(fonts/roboto/roboto-300.woff) format("woff"), url(fonts/roboto/roboto-300.ttf) format("truetype"), url(fonts/roboto/roboto-300.svg) format("svg");
+  /* Legacy iOS */ }
+.logo, h1, h2 {
+  font-family: 'Shrikhand';
+  font-size: medium; }
 
-Backtrace:
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:454:in `read'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:454:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:294:in `watch'
-/usr/lib/ruby/vendor_ruby/sass/plugin.rb:109:in `method_missing'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:354:in `watch_or_update'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:50:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:18:in `parse!'
-/usr/bin/sass:8:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - ./sass/main.scss"; }
+p, button, figcaption {
+  font-family: 'roboto';
+  font-size: small;
+  text-decoration: none;
+  color: black; }
+
+h1 + p {
+  color: grey; }
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.logo {
+  margin-left: auto;
+  margin-right: auto; }
+
+.header__logo + button {
+  align-self: flex-start; }
+
+.btn-return {
+  width: 20px;
+  height: 20px;
+  outline: none;
+  background: url("/images/icons/arrow-left.svg") no-repeat;
+  border: none;
+  position: absolute;
+  left: 10px; }
+
+@media screen and (max-width: 480px) {
+  #body {
+    width: 480px;
+    overflow: hidden;
+    margin: auto; }
+
+  .icon {
+    width: 12px;
+    height: 12px; }
+
+  .search {
+    margin-top: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding-bottom: 20px; }
+
+  .search__bar {
+    display: flex;
+    align-items: center;
+    background-color: #d3cccc;
+    justify-content: center;
+    height: 30px; }
+    .search__bar img {
+      position: relative;
+      left: 50px; }
+    .search__bar form input {
+      background-color: #d3cccc;
+      outline: none;
+      border: none;
+      text-align: center; }
+
+  .search button {
+    background-color: #9356DC;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px 20px;
+    font-family: "roboto";
+    font-size: 0.75em;
+    font-weight: bold;
+    width: 180px;
+    margin-top: 20px; }
+
+  .search p {
+    width: 80%;
+    margin: auto;
+    font-size: 0.8em; }
+
+  .step {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 20px 20px;
+    background-color: #f2f2f2; }
+    .step:hover {
+      background-color: #FF79DA; }
+    .step__icon {
+      margin-left: 50px;
+      width: 12px;
+      height: 12px; }
+    .step__name {
+      margin-left: 40px;
+      font-weight: bold; }
+
+  .step__number {
+    display: flex;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px 10px;
+    background-color: #9356DC;
+    position: absolute;
+    left: 1px; }
+    .step__number__1, .step__number__2, .step__number__3 {
+      font-size: 0.7em;
+      text-align: center;
+      margin: auto;
+      color: #fff; }
+
+  .restaurants {
+    background-color: #f2f2f2;
+    display: block; }
+    .restaurants__vignette {
+      display: inline-block;
+      justify-content: flex-start;
+      width: 100%;
+      height: 240px;
+      background-color: #fff;
+      border-radius: 20px 20px;
+      margin-bottom: 15px;
+      margin-left: 0px;
+      margin-right: 0px; }
+
+  .restaurants a {
+    display: block;
+    width: 100%; }
+
+  figure {
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 0px;
+    border-radius: 20px 20px; }
+
+  figure > img {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 20px 20px;
+    border-top-right-radius: 20px 20px;
+    object-fit: cover;
+    object-position: bottom center; }
+
+  figcaption {
+    margin-left: 10px; }
+
+  .resto2 {
+    object-position: 50% 60%; }
+
+  .secteur + img {
+    width: 20px; }
+
+  .secteur {
+    width: 80%;
+    font-family: 'roboto-light';
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px; } }
+
+/*# sourceMappingURL=style.css.map */

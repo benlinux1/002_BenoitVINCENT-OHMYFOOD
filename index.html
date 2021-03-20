@@ -15,52 +15,59 @@
             <!-- Header -->
             <header class="header">
                 <div class="header__logo">
-                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
                     <button class="btn-return"></button>
+                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
                 </div>
             </header>
 
             <!-- Search Section -->
             <section class="search">
-                <div>
-                    <img src="./images/icons/position.svg" alt="city_search">
+                <div class="search__bar">
+                    <img class="icon" src="./images/icons/position.svg" alt="city_search">
+                    <form class="search__form" method="post" id="city" action="ville.php">
+                        <label for="City"></label>
+                        <input type="search" id="City" name="City" placeholder="Paris, Belleville" autofocus/>
+                    </form>
                 </div>
-                <form class="search__form" method="post" id="city" action="ville.php">
-                    <label for="City"></label>
-                    <input type="search" id="City" name="City" placeholder="Paris, Belleville" autofocus/>
-                </form>
 
                 <h1>Réservez le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélcetionnés par nos soins</p>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                 <button type="submit" form="city" value="city">Explorer nos restaurants</button>
             </section>
 
             <!-- Section Fonctionnement-->
             <section class="method">
                 <h2>Fonctionnement</h2>
-                <ul class="method__list">
                     <!-- Choose a restaurant -->
-                    <li>Choisissez un restaurant
-                        <p class="number">1</p>
-                        <img class="icon" src="./images/icons/mobile.svg" alt="choose_restaurant">
-                    </li>
+                    <div class="step">
+                        <div class="step__number">
+                            <span class="step__number__1">1</span>
+                        </div>
+                        <img class="step__icon" src="./images/icons/mobile.svg" alt="choose_restaurant">
+                        <p class="step__name">Choisissez un restaurant</p>
+                    </div>
                     <!-- Choose a menu -->
-                    <li>Composez votre menu
-                        <p class="number">2</p>
-                        <img class="icon" src="./images/icons/list.svg" alt="choose_menu">
-                    </li>
+                    <div class="step">
+                        <div class="step__number">
+                            <span class="step__number__2">2</span>
+                        </div>
+                        <img class="step__icon" src="./images/icons/list.svg" alt="choose_menu">  
+                        <p class="step__name">Composez votre menu</p>
+                    </div>
                     <!-- Enjoy -->
-                    <li>Dégustez au restaurant
-                        <p class="number">3</p>
-                        <img class="icon" src="./images/icons/store.svg" alt="enjoy">
-                    </li>
-                </ul>
+                    <div class="step">
+                        <div class="step__number">
+                            <span class="step__number__3">3</span>
+                        </div>
+                        <img class="step__icon" src="./images/icons/store.svg" alt="enjoy">
+                        <p class="step__name">Dégustez au restaurant</p>
+                    </div>
             </section>
 
 
 
             <!-- Main Section : all restaurants-->
-            <main id="restaurants">
+            <main class="restaurants">
                 <h2>Restaurants</h2>
                 <!-- Restaurant 1 -->
                 <a href="page1.html">
@@ -69,8 +76,8 @@
                             <img src="./images/restaurants/la_palette_du_gout.jpg" alt="restaurant_la_palette_du_gout_paris">
                             <figcaption>La palette du goût</figcaption>
                         </figure>
-                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                         <p class="secteur">Ménilmontant</p>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
 
@@ -78,11 +85,11 @@
                 <a href="page2.html">
                     <div class="restaurants__vignette">
                         <figure title="La note enchantee">
-                            <img src="./images/restaurants/la_note_enchantee.jpg" alt="restaurant_la_note_enchantee_paris">
+                            <img class="resto2" src="./images/restaurants/la_note_enchantee.jpg" alt="restaurant_la_note_enchantee_paris">
                             <figcaption>La note enchantée</figcaption>
                         </figure>
-                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                         <p class="secteur">Charonne</p>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
 
@@ -93,8 +100,8 @@
                             <img src="./images/restaurants/a_la_francaise.jpg" alt="restaurant_a_la_francaise_paris">
                             <figcaption>&Agrave; la française</figcaption>
                         </figure>
-                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                         <p class="secteur">Cité Rouge</p>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
 
@@ -105,8 +112,8 @@
                             <img src="./images/restaurants/le_delice_des_sens.jpg" alt="restaurant_le_delice_des_sens_paris">
                             <figcaption>Le délice des sens</figcaption>
                         </figure>
-                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                         <p class="secteur">Folie-Méricourt</p>
+                        <img src="./images/icons/heart.svg" alt="favorite" class="favorite">
                     </div>
                 </a>
             </main>

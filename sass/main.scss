@@ -1,7 +1,168 @@
 @import "./utils/functions";
 @import "./utils/variables";
+@import "./base/fonts";
+@import "./layouts/header";
 
-html
+@media screen and (max-width: 480px) /* Smartphones */
 {
-    background-color: white;
+
+    #body {
+        width: 480px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .search {
+        margin-top: 10px;
+        text-align: center;
+        background-color: $background-color-primary;
+        padding-bottom: 20px;
+    }
+
+    .search__bar {
+        display: flex;
+        align-items: center;
+        background-color: $background-color-secondary;
+        justify-content: center;
+        height: 30px;
+        img {
+            position: relative;
+            left: 50px;
+        }
+        form {
+            input {
+            background-color: $background-color-secondary;
+            outline: none;
+            border: none;
+            text-align: center;
+            }
+        }
+    }
+
+    .search button {
+        background-color: $color-primary;
+        color: #fff;
+        height: 40px;
+        border-radius: 20px 20px;
+        font-family: "roboto";
+        font-size: 0.75em;
+        font-weight: bold;
+        width: 180px;
+        margin-top: 20px;
+    }
+
+    .search p {
+        width: 80%;
+        margin: auto;
+        font-size: 0.8em;
+    }
+
+    .step {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        border-radius: 20px 20px;
+        background-color: $background-color-primary;
+        &:hover {
+            background-color: $color-secondary;
+        }
+        &__icon {
+            margin-left: 50px;
+            width: 12px;
+            height: 12px;
+        }
+        &__name {
+            margin-left: 40px;
+            font-weight: bold;
+        }
+    }
+
+    .step__number {
+        display: flex;
+        margin: auto;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px 10px;
+        background-color: $color-primary;
+        position: absolute;
+        left: 1px;
+        &__1, &__2, &__3 {
+            font-size: 0.7em;
+            text-align: center;
+            margin: auto;
+            color: #fff;
+        }
+    }
+
+
+    .restaurants {
+        background-color: $background-color-primary;
+        display: block;
+        &__vignette {
+            display: inline-block;
+            justify-content: flex-start;
+            width: 100%;
+            height: 240px;
+            background-color: #fff;
+            border-radius: 20px 20px;
+            margin-bottom: 15px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+
+    .restaurants a {
+        display: block;
+        width: 100%;
+    }
+
+    figure {
+        width: 100%;
+        height: 60%;
+        display: inline-block;
+        margin-top: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 0px;
+        border-radius: 20px 20px;
+    }
+
+    figure > img {
+        width: 100%;
+        height: 160px;
+        border-top-left-radius: 20px 20px;
+        border-top-right-radius: 20px 20px;
+        object-fit: cover;
+        object-position: bottom center;
+    }
+
+    figcaption {
+        margin-left: 10px;
+    }
+
+    .resto2 {
+        object-position: 50% 60%;
+    }
+
+    .secteur + img {
+        width: 20px;
+    }
+    .secteur {
+        width: 80%;
+        font-family: 'roboto-light';
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+
+
 }
