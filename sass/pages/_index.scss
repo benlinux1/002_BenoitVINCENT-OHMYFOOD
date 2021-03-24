@@ -1,0 +1,133 @@
+.search {
+    margin-top: 10px;
+    text-align: center;
+    background-color: $background-color-primary;
+    padding-bottom: 20px;
+}
+
+.search__bar {
+    display: flex;
+    align-items: center;
+    background-color: $background-color-secondary;
+    justify-content: center;
+    height: 30px;
+        img {
+            position: relative;
+            left: 50px;
+        }
+        form {
+            input {
+            background-color: $background-color-secondary;
+            outline: none;
+            border: none;
+            text-align: center;
+            }
+        }
+}
+
+.method {
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 2; /* utile pour écrans <280px */
+    align-items: center;
+    width: 360px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 20px 20px;
+    background-color: $background-color-primary;
+    &:hover {
+        background-color: $color-secondary;
+    }
+    &__icon {
+        margin-left: 50px;
+        width: 12px;
+        height: 12px;
+    }
+    &__name {
+        margin-left: 40px;
+        font-weight: bold;
+    }
+}
+
+.step__number {
+    float: left;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -10px;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 10px 10px;
+    background-color: $color-primary;
+    z-index: 1;
+    &__1, &__2, &__3 {
+        font-size: 0.7em;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+    }
+}
+
+.restaurants {
+    background-color: $background-color-primary;
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &__vignette {
+        display: inline-block;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 15px 15px;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        box-shadow: 1px 2px 2px $background-color-secondary;
+    }
+}
+
+.restaurants a {
+    display: flex;
+    text-decoration: none;
+}
+
+figure {
+    width: 100%;
+    height: 60%;
+    display: inline-block;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 0px;
+    border-radius: 20px 20px;
+}
+
+figure > img {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    object-fit: cover;
+    object-position: bottom center;
+}
+
+figcaption {
+    margin-left: 10px;
+    width: 100%;
+}
+
+#resto2 {
+    object-position: 50% 60%;
+}
+
+.secteur {
+    font-family: 'roboto-light';
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 12px;
+    width: 100%;
+}
