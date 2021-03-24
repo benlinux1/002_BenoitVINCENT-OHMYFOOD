@@ -1,19 +1,56 @@
 .picture > img {
     width: 100%;
+    position: relative;
+    top: 10px;
 }
 
 .menu {
-    display: inline-block;
     background-color: $background-color-primary;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: 40px;
+}
+
+.menu section {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu__vignette {
     display: inline-block;
     background-color: #fff;
-    margin-bottom: 5px;
-    width: 100%;
+    margin-bottom: 10px;
+    width: 92%;
     border-radius: 15px 15px;
     padding-left: 15px;
+    @include box-shadow;
+}
+
+.menu__title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    & .favorite {
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+        margin-right: 0px;
+    }
+}
+
+.menu h1 {
+    font-size: x-large;
+}
+
+.menu h2 {
+    border-bottom: 2px solid $color-tertiary;
+    width: 40px;
+    align-self: flex-start;
 }
 
 h3 {
@@ -23,4 +60,63 @@ h3 {
 
 h3 + p {
     margin-top: 5px;
+    display: inline-flex;
+}
+
+.price {
+    float: right;
+    margin-right: 20px;
+}
+
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .picture img {
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 70%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 780px)/* Tablettes */
+{
+    .menu h2 {
+        margin-left: 20px;
+    }
+    .menu h1 {
+        font-size: xx-large;
+    }
+}
+
+@media screen and (min-width: 781px) and (max-width: 900px)/* Tablettes */
+{
+    .menu h2 {
+        margin-left: 35px;
+    }
+    .menu h1 {
+        font-size: xx-large;
+    }
+}
+
+
+
+@media screen and (min-width: 900px) and (max-width: 1319px) /* Tablettes */
+{
+    .menu h2 {
+        margin-left: 40px;
+    }
+    .menu h1 {
+        font-size: xx-large;
+    }
+}
+
+
+@media screen and (min-width: 1320px) /* Tablettes */
+{
+    .menu h2 {
+        margin-left: 50px;
+    }
+    .menu h1 {
+        font-size: xx-large;
+    }
 }

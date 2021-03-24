@@ -28,7 +28,7 @@
          url(fonts/roboto/roboto-regular.svg) format('svg'); /* Legacy iOS */
 }
 
-.logo, h1, h2 {
+.logo, h1, h2, h3 {
     font-family: 'Shrikhand';
     font-size: medium;
 }
@@ -46,4 +46,15 @@ h1 + p {
 
 h2 {
     margin-left: 15px;
+}
+
+h3 + p {
+    font-family: 'roboto-light';
+}
+
+.price {
+    font-family: 'roboto-light';
+    font-size: small;
+    font-weight: bold;
+    margin-top: 5px;
 }

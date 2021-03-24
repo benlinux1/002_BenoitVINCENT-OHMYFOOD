@@ -12,15 +12,15 @@
     justify-content: center;
     height: 30px;
         img {
-            position: relative;
-            left: 50px;
+            float: left;
         }
         form {
             input {
             background-color: $background-color-secondary;
             outline: none;
             border: none;
-            text-align: center;
+            width: 140px;
+            margin-left: 15px;
             }
         }
 }
@@ -29,16 +29,19 @@
     margin-top: 20px;
 }
 
+.step__container {
+    margin-bottom: 10px;
+}
+
 .step {
     display: flex;
     justify-content: flex-start;
     flex-shrink: 2; /* utile pour écrans <280px */
     align-items: center;
-    width: 360px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 340px;
     border-radius: 20px 20px;
     background-color: $background-color-primary;
+    @include box-shadow;
     &:hover {
         background-color: $color-secondary;
     }
@@ -64,6 +67,7 @@
     border-radius: 10px 10px;
     background-color: $color-primary;
     z-index: 1;
+    @include box-shadow;
     &__1, &__2, &__3 {
         font-size: 0.7em;
         text-align: center;
@@ -86,7 +90,7 @@
         margin-bottom: 15px;
         margin-left: 10px;
         margin-right: 10px;
-        box-shadow: 1px 2px 2px $background-color-secondary;
+        @include box-shadow;
     }
 }
 

@@ -36,6 +36,11 @@
     font-size: small;
 }
 
+.menu + .footer {
+    position: relative;
+    bottom: 40px;
+}
+
 @media screen and (min-width: 481px)
 {
     footer ul {
@@ -48,4 +53,5 @@
     .footer {
         text-align: center;
     }
+
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Ohmyfood</title>
+    <meta name="description" content="Restaurant le Delice des Sens Folie-Mericourt" />
+    </head>
+
+    <body>
+
+        <div id="bloc_page">
+  
+            <!-- Header -->
+            <header class="header">
+                <div class="header__logo">
+                    <button class="btn-return" onclick="window.location.href = 'index.html';"></button>
+                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+                </div>
+            </header>
+
+            <!-- Picture -->
+            <div class="picture">
+                <img src="/images/restaurants/le_delice_des_sens.jpg" alt="Restaurant la palette du gout">
+            </div>
+
+            <!-- Restaurant -->
+            <main class="menu">
+
+                <div class="menu__title">
+                    <h1>Le délice des sens</h1>
+                    <img class="favorite" src="/images/icons/heart.svg" alt="favorite">
+                </div>
+
+                <!-- Section Entrées -->
+                <section>
+                    <h2>ENTR&Eacute;ES</h2>
+                    <div class="menu__vignette">
+                        <h3>Tartare de thon</h3>
+                        <p class="aside">Assaisonné au yuzu</p>
+                        <span class="price">25€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p class="aside">Et sa farandole de petits légumes</p>
+                        <span class="price">35€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Velouté de cèpes</h3>
+                        <p class="aside">Aux truffes</p>
+                        <span class="price">20€</span>
+                    </div>
+                </section>
+
+                <!-- Plats -->
+                <section>
+                    <h2>PLATS</h2>
+                    <div class="menu__vignette">
+                        <h3>Poulet rôti aux herbes de Provence </h3>
+                        <p class="aside">Et sa crème de truffe</p>
+                        <span class="price">40€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Langouste rôtie</h3>
+                        <p class="aside">Et ses légumes de saison</p>
+                        <span class="price">35€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Côte de boeuf Angus</h3>
+                        <p class="aside">Et sa purée de panais</p>
+                        <span class="price">44€</span>
+                    </div>
+                </section>
+
+                <!-- Desserts -->
+                <section>
+                    <h2>DESSERTS</h2>
+                    <div class="menu__vignette">
+                        <h3>Farandole de desserts</h3>
+                        <p class="aside">Du chef</p>
+                        <span class="price">18€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Tiramisu</h3>
+                        <p class="aside">À la noisette</p>
+                        <span class="price">22€</span>
+                    </div>
+
+                    <div class="menu__vignette">
+                        <h3>Mousse au chocolat</h3>
+                        <p class="aside">Au piment d'Espelette et à la truffe noire</p>
+                        <span class="price">23€</span>
+                    </div>
+                </section>
+
+                <!-- Bouton commander-->
+                <button class="button" type="submit" method="post" action="traitement.php" value="order">Commander</button>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer__logo">
+                    <img class="logo" src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood_footer">
+                </div>
+                <ul>
+                    <!-- Proposer un restaurant -->
+                    <li>
+                        <a href="">
+                            <img class="footer__icon" src="./images/icons/utensils.svg" alt="fork_knife">
+                            <span>Proposer un restaurant</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <img class="footer__icon" src="./images/icons/hands-helping.svg" alt="partnership">
+                            <span>Devenir propriétaire</span>
+                        </a>
+                    </li>
+
+                    <li><a href="">Mentions légales</a></li>
+                    
+                    <li><a href="">Contact</a></li>
+                </ul>
+
+            </footer>
+        </div>
+    </body>
+</html>
