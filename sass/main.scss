@@ -93,4 +93,21 @@
         width: 240px;
         height: 120px;
     }
+
+    .section__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .menu__vignette {
+        width: 320px;
+    }
+
+    .menu h2 {
+        align-self: center;
+        width: auto;
+        margin-left: 0px;
+    }
 }

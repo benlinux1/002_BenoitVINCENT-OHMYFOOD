@@ -63,7 +63,8 @@ h3 + p {
   border: none;
   position: absolute;
   left: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 1; }
 
 .footer {
   background-color: black;
@@ -417,6 +418,20 @@ h3 + p {
 
   .restaurants__vignette__picture {
     width: 240px;
-    height: 120px; } }
+    height: 120px; }
+
+  .section__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; }
+
+  .menu__vignette {
+    width: 320px; }
+
+  .menu h2 {
+    align-self: center;
+    width: auto;
+    margin-left: 0px; } }
 
 /*# sourceMappingURL=style.css.map */
