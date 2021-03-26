@@ -76,47 +76,17 @@ h3 + p {
     object-fit: cover;
     object-position: 50% 70%;
     }
-}
-
-@media screen and (min-width: 481px) and (max-width: 780px)/* Tablettes */
-{
-    .menu h2 {
-        margin-left: 20px;
-    }
     .menu h1 {
         font-size: xx-large;
     }
-}
-
-@media screen and (min-width: 781px) and (max-width: 900px)/* Tablettes */
-{
     .menu h2 {
-        margin-left: 35px;
+        margin-left: 0px;
     }
-    .menu h1 {
-        font-size: xx-large;
+    .menu__container {
+        column-gap: 25px;
     }
-}
 
-
-
-@media screen and (min-width: 900px) and (max-width: 1319px) /* Tablettes */
-{
-    .menu h2 {
-        margin-left: 40px;
-    }
-    .menu h1 {
-        font-size: xx-large;
-    }
-}
-
-
-@media screen and (min-width: 1320px) /* Tablettes */
-{
-    .menu h2 {
-        margin-left: 50px;
-    }
-    .menu h1 {
-        font-size: xx-large;
+    .section__container {
+        margin-left: 0px;
     }
 }

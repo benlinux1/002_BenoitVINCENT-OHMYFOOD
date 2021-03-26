@@ -1,9 +1,9 @@
 @import "./utils/functions";
 @import "./utils/variables";
 @import "./base/fonts";
+@import "./base/icons";
 @import "./layouts/header";
 @import "./layouts/footer";
-@import "./base/icons";
 @import "./components/buttons";
 @import "./pages/index";
 @import "./pages/menu";
@@ -44,11 +44,10 @@
         margin-top: 0px;
     }
 
-
     .method {
         margin-bottom: 10px;
-
     }
+
     .method__container {
         display: flex;
         align-items: center;

@@ -39,6 +39,10 @@ h3 + p {
   font-weight: bold;
   margin-top: 5px; }
 
+.icon {
+  width: 12px;
+  height: 12px; }
+
 #bloc_page {
   position: relative;
   top: 10px; }
@@ -115,31 +119,9 @@ h3 + p {
 
   .footer .logo {
     padding-left: 0px; } }
-.icon {
-  width: 12px;
-  height: 12px; }
-
-.favorite {
-  background-image: url(./images/icons/heart.svg);
-  background-color: transparent;
-  border: none;
-  width: 20px;
-  height: 20px;
-  float: right;
-  position: relative;
-  bottom: 10px;
-  margin-right: 15px;
-  opacity: 1;
-  z-index: 1; }
-  .favorite:hover {
-    filter: invert(60%) sepia(64%) saturate(568%) hue-rotate(282deg) brightness(101%) contrast(101%); }
-  .favorite:active {
-    background-image: url(./images/icons/heart-solid.svg);
-    fill: #FF79DA; }
-
 .button, .order-button {
   display: block;
-  background-color: #9356DC;
+  background-color: #FF79DA;
   color: #fff;
   height: 40px;
   border-radius: 20px 20px;
@@ -152,7 +134,45 @@ h3 + p {
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
-  box-shadow: 2px 2px 2px #d3cccc; }
+  text-shadow: 2px 1px grey;
+  position: relative;
+  z-index: 1;
+  transition: all 700ms;
+  box-shadow: 3px 3px 3px #d3cccc; }
+  .button:hover, .order-button:hover {
+    box-shadow: 6px 6px 6px #d3cccc; }
+    .button:hover .button__bg, .order-button:hover .button__bg {
+      opacity: 1; }
+  .button__bg, .order-button__bg {
+    position: absolute;
+    border-radius: 20px 20px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ff13be;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 500ms; }
+
+.favorite {
+  background-image: url(./images/icons/heart.svg);
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  float: right;
+  position: relative;
+  bottom: 10px;
+  margin-right: 15px;
+  opacity: 1;
+  z-index: 1;
+  transition: all 1000ms ease-in-out; }
+  .favorite:hover {
+    filter: invert(60%) sepia(64%) saturate(568%) hue-rotate(282deg) brightness(101%) contrast(101%); }
+  .favorite:active {
+    background-image: url(./images/icons/heart-solid.svg);
+    transition-duration: 2000ms; }
 
 .order-button :not(.favorite) {
   display: block;
@@ -164,7 +184,7 @@ h3 + p {
   justify-content: center;
   align-items: center;
   border: none;
-  box-shadow: 2px 2px 2px #d3cccc; }
+  box-shadow: 3px 3px 3px #d3cccc; }
 
 .search {
   margin-top: 10px;
@@ -202,7 +222,7 @@ h3 + p {
   width: 340px;
   border-radius: 20px 20px;
   background-color: #f2f2f2;
-  box-shadow: 2px 2px 2px #d3cccc; }
+  box-shadow: 3px 3px 3px #d3cccc; }
   .step:hover {
     background-color: #FF79DA; }
   .step__icon {
@@ -224,7 +244,7 @@ h3 + p {
   border-radius: 10px 10px;
   background-color: #9356DC;
   z-index: 1;
-  box-shadow: 2px 2px 2px #d3cccc; }
+  box-shadow: 3px 3px 3px #d3cccc; }
   .step__number__1, .step__number__2, .step__number__3 {
     font-size: 0.7em;
     text-align: center;
@@ -245,7 +265,7 @@ h3 + p {
     margin-bottom: 15px;
     margin-left: 10px;
     margin-right: 10px;
-    box-shadow: 2px 2px 2px #d3cccc; }
+    box-shadow: 3px 3px 3px #d3cccc; }
 
 .restaurants a {
   display: flex;
@@ -309,7 +329,7 @@ figcaption {
   width: 92%;
   border-radius: 15px 15px;
   padding-left: 15px;
-  box-shadow: 2px 2px 2px #d3cccc; }
+  box-shadow: 3px 3px 3px #d3cccc; }
 
 .menu__title {
   display: flex;
@@ -346,31 +366,19 @@ h3 + p {
   .picture img {
     height: 300px;
     object-fit: cover;
-    object-position: 50% 70%; } }
-@media screen and (min-width: 481px) and (max-width: 780px) {
-  .menu h2 {
-    margin-left: 20px; }
+    object-position: 50% 70%; }
 
   .menu h1 {
-    font-size: xx-large; } }
-@media screen and (min-width: 781px) and (max-width: 900px) {
-  .menu h2 {
-    margin-left: 35px; }
+    font-size: xx-large; }
 
-  .menu h1 {
-    font-size: xx-large; } }
-@media screen and (min-width: 900px) and (max-width: 1319px) {
   .menu h2 {
-    margin-left: 40px; }
+    margin-left: 0px; }
 
-  .menu h1 {
-    font-size: xx-large; } }
-@media screen and (min-width: 1320px) {
-  .menu h2 {
-    margin-left: 50px; }
+  .menu__container {
+    column-gap: 25px; }
 
-  .menu h1 {
-    font-size: xx-large; } }
+  .section__container {
+    margin-left: 0px; } }
 @media screen and (max-width: 480px) {
   #body {
     width: 480px;
