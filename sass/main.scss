@@ -31,6 +31,10 @@
         justify-content: center;
         align-items: center;
     }
+
+    .section__container {
+        margin-left: 15px;
+    }
 }
 
 
@@ -94,11 +98,23 @@
         height: 120px;
     }
 
-    .section__container {
+    .menu__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+    }
+
+    .menu section {
+        display: inline-block;
+    }
+
+    .section__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: 100%;
+        margin-left: 20px;
     }
 
     .menu__vignette {
@@ -107,7 +123,6 @@
 
     .menu h2 {
         align-self: center;
-        width: auto;
-        margin-left: 0px;
+        margin-left: 20px;
     }
 }
