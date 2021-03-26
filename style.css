@@ -121,7 +121,7 @@ h3 + p {
     padding-left: 0px; } }
 .button, .order-button {
   display: block;
-  background-color: #FF79DA;
+  background: linear-gradient(150deg, #FF79DA, 75%, #9356DC);
   color: #fff;
   height: 40px;
   border-radius: 20px 20px;
@@ -144,16 +144,17 @@ h3 + p {
     .button:hover .button__bg, .order-button:hover .button__bg {
       opacity: 1; }
   .button__bg, .order-button__bg {
+    content: "";
     position: absolute;
     border-radius: 20px 20px;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #ff13be;
+    background: linear-gradient(150deg, #FF79DA, 40%, #9356DC);
     opacity: 0;
     z-index: -1;
-    transition: opacity 500ms; }
+    transition: opacity 1500ms; }
 
 .favorite {
   background-image: url(./images/icons/heart.svg);
@@ -262,6 +263,7 @@ h3 + p {
   box-shadow: 3px 3px 3px #d3cccc; }
   .step__number__1, .step__number__2, .step__number__3 {
     font-size: 0.7em;
+    font-family: 'roboto';
     text-align: center;
     margin: auto;
     color: #fff; }

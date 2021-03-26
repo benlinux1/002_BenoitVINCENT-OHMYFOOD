@@ -1,6 +1,6 @@
 .button, .order-button {
     display: block;
-    background-color: $color-secondary;
+    background: linear-gradient(150deg, $color-secondary, 75%, $color-primary);
     color: #fff;
     height: 40px;
     border-radius: 20px 20px;
@@ -25,16 +25,17 @@
         }
     }
     &__bg {
+        content: "";
         position: absolute;
         border-radius: 20px 20px;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: darken($color:$color-secondary, $amount: 20%);
+        background: linear-gradient(150deg, $color-secondary, 40%, $color-primary);
         opacity: 0;
         z-index: -1;
-        transition: opacity 500ms;
+        transition: opacity 1500ms;
     }
 }
 
