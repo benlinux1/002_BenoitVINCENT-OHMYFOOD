@@ -3,9 +3,9 @@
 }
 
 @mixin box-shadow-grow {
-  box-shadow: 6px 6px 6px $background-color-secondary;
+  box-shadow: 8px 8px 8px $background-color-secondary;
 }
 
-@mixin btn-mods($colour: $color-secondary) {
-  darken : ($colour, 8%);
+@mixin btn-mods($colour: $color-primary) {
+  lighten : ($colour, 20%);
 }

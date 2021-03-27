@@ -1,6 +1,6 @@
 .button, .order-button {
     display: block;
-    background: linear-gradient(150deg, $color-secondary, 75%, $color-primary);
+    background: linear-gradient(0deg, $color-primary, 40%, $color-secondary);
     color: #fff;
     height: 40px;
     border-radius: 20px 20px;
@@ -16,15 +16,17 @@
     text-shadow: 2px 1px $color-txt-secondary;
     position: relative;
     z-index: 1;
-    transition : all 700ms;
+    transition : all 800ms;
+    transform: perspective(250px) translateZ(0px);
     @include box-shadow;
     &:hover {
-        @include box-shadow-grow;
-        & .button__bg {
+        transform: perspective(300px) translateZ(4px);
+        &::after {
             opacity: 1;
+            transform: scale(1.02);
         }
     }
-    &__bg {
+    &::after {
         content: "";
         position: absolute;
         border-radius: 20px 20px;
@@ -32,10 +34,12 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: linear-gradient(150deg, $color-secondary, 40%, $color-primary);
+        background: linear-gradient($color-secondary, 75%, $color-primary);
         opacity: 0;
         z-index: -1;
-        transition: opacity 1500ms;
+        transform: scale(1);
+        transition: all 800ms;
+        @include box-shadow-grow;
     }
 }
 
@@ -56,11 +60,12 @@
     z-index: 1;
     transition : all 700ms;
     &:active {
-        & .favorite__bg {
+        &::after {
             opacity: 1;
         }
     }
-    &__bg {
+    &::after {
+        content: "";
         background-image: url(/images/icons/heart-solid.svg);
         filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
         position: absolute;

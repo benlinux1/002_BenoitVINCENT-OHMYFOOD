@@ -121,7 +121,7 @@ h3 + p {
     padding-left: 0px; } }
 .button, .order-button {
   display: block;
-  background: linear-gradient(150deg, #FF79DA, 75%, #9356DC);
+  background: linear-gradient(0deg, #9356DC, 40%, #FF79DA);
   color: #fff;
   height: 40px;
   border-radius: 20px 20px;
@@ -137,13 +137,15 @@ h3 + p {
   text-shadow: 2px 1px grey;
   position: relative;
   z-index: 1;
-  transition: all 700ms;
+  transition: all 800ms;
+  transform: perspective(250px) translateZ(0px);
   box-shadow: 3px 3px 3px #d3cccc; }
   .button:hover, .order-button:hover {
-    box-shadow: 6px 6px 6px #d3cccc; }
-    .button:hover .button__bg, .order-button:hover .button__bg {
-      opacity: 1; }
-  .button__bg, .order-button__bg {
+    transform: perspective(300px) translateZ(4px); }
+    .button:hover::after, .order-button:hover::after {
+      opacity: 1;
+      transform: scale(1.02); }
+  .button::after, .order-button::after {
     content: "";
     position: absolute;
     border-radius: 20px 20px;
@@ -151,10 +153,12 @@ h3 + p {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(150deg, #FF79DA, 40%, #9356DC);
+    background: linear-gradient(#FF79DA, 75%, #9356DC);
     opacity: 0;
     z-index: -1;
-    transition: opacity 1500ms; }
+    transform: scale(1);
+    transition: all 800ms;
+    box-shadow: 8px 8px 8px #d3cccc; }
 
 .favorite {
   background-image: url(./images/icons/heart.svg);
@@ -172,9 +176,10 @@ h3 + p {
   position: relative;
   z-index: 1;
   transition: all 700ms; }
-  .favorite:active .favorite__bg {
+  .favorite:active::after {
     opacity: 1; }
-  .favorite__bg {
+  .favorite::after {
+    content: "";
     background-image: url(/images/icons/heart-solid.svg);
     filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
     position: absolute;
@@ -186,7 +191,7 @@ h3 + p {
     transform: scale(1);
     z-index: 0;
     transition: opacity 600ms; }
-    .favorite__bg:active {
+    .favorite::after:active {
       filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
       transform: scale(1.08); }
 
