@@ -84,19 +84,25 @@
     margin-top: 15px;
     margin-bottom: 15px;
     &__vignette {
+        width: 95%;
         display: inline-block;
-        height: 168px;
         background-color: #fff;
         border-radius: 15px 15px;
         margin-bottom: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
+        padding-bottom: 5px;
         @include box-shadow;
     }
 }
 
-.restaurants a {
+.restaurants__container {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.restaurants a {
     text-decoration: none;
     margin-top: 0px;
 }
@@ -133,6 +139,6 @@ figcaption {
     font-family: 'roboto-light';
     margin-top: 0px;
     margin-bottom: 5px;
-    margin-left: 12px;
+    margin-left: 10px;
     display: inline;
 }

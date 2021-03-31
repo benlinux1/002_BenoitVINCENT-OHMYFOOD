@@ -46,17 +46,17 @@
 .favorite {
     background-image: url(./images/icons/heart.svg);
     background-color: transparent;
+    background-repeat: no-repeat;
     border: none;
     width: 20px;
     height: 20px;
     float: right;
-    bottom: 10px;
-    margin-right: 15px;
+    margin-right: 20px;
     opacity: 1;
     z-index: 1;
     transition: all 1000ms ease-in-out;
     position: relative;
-    user-select: none;
+    bottom: 10px;
     &:active {
         &::after {
             opacity: 1;
@@ -64,8 +64,7 @@
     }
     &::after {
         content: "";
-        background-image: url(/images/icons/heart-solid.svg);
-        filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
+        border: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -74,10 +73,8 @@
         opacity: 0;
         transform: scale(1);
         z-index: 0;
-        transition: opacity 600ms;
-        user-select: none;
-        &:active {
-            filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
+        transition: all 800ms;
+        &:hover {
             transform: scale(1.08);
         }
     }
@@ -108,9 +105,46 @@
     display: flex;
     float: right;
     position: relative;
-    bottom: 150px;
-    left: 20px;
+    bottom: 170px;
+    left: 35px;
     & span {
         margin: auto;
     }
+}
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .new {
+        position: relative;
+        bottom: 150px;
+        left: 30px;
+    }
+
+    .favorite {
+        position: relative;
+        bottom: 27px;
+    }
+}
+
+.fas fa-heart {
+    background: linear-gradient($color-secondary, 75%, $color-primary);
+    background-clip: text;
+    color: aqua;
+}
+
+.checkbox {
+    float: top right;
+    display: flex;
+    margin: auto;
+    background-color: $color-tertiary;
+    width: 70px;
+    height: 68px;
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+.checkok {
+    margin: auto;
+    width: 25px;
+    filter: invert(100%) sepia(0%) saturate(7449%) hue-rotate(71deg) brightness(107%) contrast(105%);
 }

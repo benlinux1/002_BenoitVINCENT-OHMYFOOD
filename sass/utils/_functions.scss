@@ -9,3 +9,18 @@
 @mixin btn-mods($colour: $color-primary) {
   lighten : ($colour, 20%);
 }
+
+.progress {
+  &__bar {
+      opacity: 0;
+  }
+}
+
+@keyframes checkbox{
+    0% {
+        transform: translateX(-9999px);
+    }
+    100% {
+        transform: translateX(0);
+        }
+    }
