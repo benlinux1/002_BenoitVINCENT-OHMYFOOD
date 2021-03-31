@@ -85,7 +85,7 @@
     margin-bottom: 15px;
     &__vignette {
         display: inline-block;
-        width: 100%;
+        height: 168px;
         background-color: #fff;
         border-radius: 15px 15px;
         margin-bottom: 15px;
@@ -98,15 +98,15 @@
 .restaurants a {
     display: flex;
     text-decoration: none;
+    margin-top: 0px;
 }
 
 figure {
     width: 100%;
-    height: 60%;
     display: inline-block;
-    margin-top: 2px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: 0px;
     border-radius: 20px 20px;
 }
@@ -134,5 +134,5 @@ figcaption {
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 12px;
-    width: 100%;
+    display: inline;
 }

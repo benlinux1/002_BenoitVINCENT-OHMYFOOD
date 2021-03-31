@@ -50,15 +50,13 @@
     width: 20px;
     height: 20px;
     float: right;
-    position: relative;
     bottom: 10px;
     margin-right: 15px;
     opacity: 1;
     z-index: 1;
     transition: all 1000ms ease-in-out;
     position: relative;
-    z-index: 1;
-    transition : all 700ms;
+    user-select: none;
     &:active {
         &::after {
             opacity: 1;
@@ -77,11 +75,14 @@
         transform: scale(1);
         z-index: 0;
         transition: opacity 600ms;
+        user-select: none;
         &:active {
             filter: invert(76%) sepia(51%) saturate(3448%) hue-rotate(285deg) brightness(103%) contrast(105%);
             transform: scale(1.08);
         }
     }
+
+
 }
 
 .order-button :not(.favorite)
@@ -96,4 +97,22 @@
     align-items: center;
     border: none;
     @include box-shadow;
+}
+
+.new {
+    background-color: $color-tertiary;
+    font-family: 'roboto';
+    font-weight: bold;
+    color: black;
+    font-size: 0.7em;
+    width: 65px;
+    height: 20px;
+    display: flex;
+    float: right;
+    position: relative;
+    bottom: 130px;
+    left: 20px;
+    & span {
+        margin: auto;
+    }
 }
