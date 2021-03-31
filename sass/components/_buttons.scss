@@ -81,8 +81,6 @@
             transform: scale(1.08);
         }
     }
-
-
 }
 
 .order-button :not(.favorite)
@@ -110,7 +108,7 @@
     display: flex;
     float: right;
     position: relative;
-    bottom: 130px;
+    bottom: 150px;
     left: 20px;
     & span {
         margin: auto;

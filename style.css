@@ -217,7 +217,7 @@ h3 + p {
   display: flex;
   float: right;
   position: relative;
-  bottom: 130px;
+  bottom: 150px;
   left: 20px; }
   .new span {
     margin: auto; }
