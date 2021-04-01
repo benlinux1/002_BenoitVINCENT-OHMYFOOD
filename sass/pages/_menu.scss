@@ -58,14 +58,22 @@ h3 {
     margin-top: 10px;
 }
 
-h3 + p {
+.aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 5px;
-    display: inline-flex;
+    width: 100%;
+    flex-shrink: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
 }
 
 .price {
-    float: right;
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-left: 10px;
+    flex-wrap: nowrap;
 }
 
 
@@ -88,5 +96,25 @@ h3 + p {
 
     .section__container {
         margin-left: 0px;
+    }
+    .menu__vignette {
+        height: 68px;
+        &:hover {
+            width: 74%;
+            animation-fill-mode: forwards;
+            & .checkbox {
+                opacity: 1;
+            }
+            & .aside:not(.price) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow : ellipsis;
+            }
+        }
+    }
+    .menu h3 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow : ellipsis;
     }
 }
