@@ -66,6 +66,9 @@
     }
     &::after {
         content: "";
+        display: block;
+        background-image: url(./images/icons/heart-solid.svg);
+        filter: invert(65%) sepia(36%) saturate(1279%) hue-rotate(285deg) brightness(95%) contrast(101%);
         border: none;
         position: absolute;
         top: 0;
@@ -117,6 +120,7 @@
 .fa-heart {
     background: linear-gradient($color-secondary, 75%, $color-primary);
     background-clip: text;
+    font-weight: bold;
     color: aqua;
 }
 

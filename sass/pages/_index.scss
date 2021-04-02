@@ -42,9 +42,6 @@
     border-radius: 20px 20px;
     background-color: $background-color-primary;
     @include box-shadow;
-    &:hover {
-        background-color: $color-secondary;
-    }
     &__icon {
         margin-left: 50px;
         width: 12px;
@@ -54,6 +51,17 @@
         margin-left: 40px;
         font-weight: bold;
     }
+}
+
+.step--mod {
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 2; /* utile pour écrans <280px */
+    align-items: center;
+    width: 340px;
+    border-radius: 20px 20px;
+    background-color: $background-color-mod;
+    @include box-shadow;
 }
 
 .step__number {

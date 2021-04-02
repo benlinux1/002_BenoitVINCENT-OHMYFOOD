@@ -1,7 +1,4 @@
 @charset "UTF-8";
-.progress__bar {
-  opacity: 0; }
-
 @keyframes check-box {
   0% {
     transform: rotate(0deg); }
@@ -209,6 +206,9 @@ h2 {
     opacity: 1; }
   .favorite::after {
     content: "";
+    display: block;
+    background-image: url(./images/icons/heart-solid.svg);
+    filter: invert(65%) sepia(36%) saturate(1279%) hue-rotate(285deg) brightness(95%) contrast(101%);
     border: none;
     position: absolute;
     top: 0;
@@ -253,6 +253,7 @@ h2 {
 .fa-heart {
   background: linear-gradient(#FF79DA, 75%, #9356DC);
   background-clip: text;
+  font-weight: bold;
   color: aqua; }
 
 .checkbox {
@@ -338,8 +339,6 @@ h2 {
   border-radius: 20px 20px;
   background-color: #f2f2f2;
   box-shadow: 3px 3px 3px #d3cccc; }
-  .step:hover {
-    background-color: #FF79DA; }
   .step__icon {
     margin-left: 50px;
     width: 12px;
@@ -347,6 +346,17 @@ h2 {
   .step__name {
     margin-left: 40px;
     font-weight: bold; }
+
+.step--mod {
+  display: flex;
+  justify-content: flex-start;
+  flex-shrink: 2;
+  /* utile pour écrans <280px */
+  align-items: center;
+  width: 340px;
+  border-radius: 20px 20px;
+  background-color: #ffaee7;
+  box-shadow: 3px 3px 3px #d3cccc; }
 
 .step__number {
   float: left;
@@ -588,15 +598,15 @@ h3 {
     margin-top: 0px;
     z-index: 1; }
 
-  .step {
+  .step, .step--mod {
     width: 230px;
     min-width: 230px;
     margin-left: 0px;
     margin-bottom: 0px;
     text-align: center; }
-    .step__icon {
+    .step__icon, .step--mod__icon {
       margin-left: 25px; }
-    .step__name {
+    .step__name, .step--mod__name {
       margin-left: 10px;
       width: 160px; }
 
