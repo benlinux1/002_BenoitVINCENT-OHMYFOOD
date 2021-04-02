@@ -112,20 +112,6 @@
     }
 }
 
-@media screen and (min-width: 481px) /* Tablettes */
-{
-    .new {
-        position: relative;
-        bottom: 150px;
-        left: 30px;
-    }
-
-    .favorite {
-        position: relative;
-        bottom: 27px;
-    }
-}
-
 .fa-heart {
     background: linear-gradient($color-secondary, 75%, $color-primary);
     background-clip: text;
@@ -136,13 +122,13 @@
     float: right;
     display: flex;
     background-color: $color-tertiary;
-    width: 70px;
+    width: 60px;
     height: 68px;
     border-top-right-radius: 10px 10px;
     border-bottom-right-radius: 10px 10px;
     position: relative;
     bottom: 60px;
-    left: 60px;
+    left: 50px;
     opacity: 0;
     transition: all 200ms ease-in-out;
     @include box-shadow;
@@ -176,4 +162,18 @@
     transition: all 300ms ease-in-out;
     animation-fill-mode: both;
     opacity: 0;
+}
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .new {
+        position: relative;
+        bottom: 150px;
+        left: 30px;
+    }
+
+    .favorite {
+        position: relative;
+        bottom: 27px;
+    }
 }

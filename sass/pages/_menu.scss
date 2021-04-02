@@ -24,10 +24,27 @@
     display: inline-block;
     background-color: #fff;
     margin-bottom: 10px;
-    width: 92%;
+    width: 90%;
     border-radius: 15px 15px;
     padding-left: 15px;
     @include box-shadow;
+    height: 68px;
+        &:hover {
+            width: 78%;
+            animation-fill-mode: forwards;
+            & .checkbox {
+                opacity: 1;
+            }
+            & h3 {
+                width: 90%;
+            }
+            & .aside {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow : ellipsis;
+                width: 75%;
+            }
+        }
 }
 
 .menu__title {
@@ -41,6 +58,20 @@
         bottom: 0px;
         margin-right: 0px;
     }
+}
+
+.menu h3 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+    margin-top: 12px;
+}
+
+.with {
+    display: flex;
+    align-items: center;
+    height: 25px;
 }
 
 .menu h1 {
@@ -85,43 +116,16 @@ h3 {
         margin-left: 0px;
     }
     .menu__container {
-        column-gap: 25px;
+        column-gap: 20px;
     }
 
     .section__container {
         margin-left: 0px;
     }
+
     .menu__vignette {
-        height: 68px;
         &:hover {
-            width: 74%;
-            animation-fill-mode: forwards;
-            & .checkbox {
-                opacity: 1;
-            }
-            & h3 {
-                width: 90%;
-            }
-            & .aside {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow : ellipsis;
-                width: 75%;
-            }
+            width: 80%;
         }
-    }
-
-    .menu h3 {
-        display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow : ellipsis;
-        margin-top: 12px;
-    }
-
-    .with {
-        display: flex;
-        align-items: center;
-        height: 25px;
     }
 }

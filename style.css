@@ -232,15 +232,6 @@ h2 {
   .new span {
     margin: auto; }
 
-@media screen and (min-width: 481px) {
-  .new {
-    position: relative;
-    bottom: 150px;
-    left: 30px; }
-
-  .favorite {
-    position: relative;
-    bottom: 27px; } }
 .fa-heart {
   background: linear-gradient(#FF79DA, 75%, #9356DC);
   background-clip: text;
@@ -250,13 +241,13 @@ h2 {
   float: right;
   display: flex;
   background-color: #99E2D0;
-  width: 70px;
+  width: 60px;
   height: 68px;
   border-top-right-radius: 10px 10px;
   border-bottom-right-radius: 10px 10px;
   position: relative;
   bottom: 60px;
-  left: 60px;
+  left: 50px;
   opacity: 0;
   transition: all 200ms ease-in-out;
   box-shadow: 3px 3px 3px #d3cccc;
@@ -283,6 +274,15 @@ h2 {
   animation-fill-mode: both;
   opacity: 0; }
 
+@media screen and (min-width: 481px) {
+  .new {
+    position: relative;
+    bottom: 150px;
+    left: 30px; }
+
+  .favorite {
+    position: relative;
+    bottom: 27px; } }
 .search {
   margin-top: 10px;
   text-align: center;
@@ -429,10 +429,23 @@ figcaption {
   display: inline-block;
   background-color: #fff;
   margin-bottom: 10px;
-  width: 92%;
+  width: 90%;
   border-radius: 15px 15px;
   padding-left: 15px;
-  box-shadow: 3px 3px 3px #d3cccc; }
+  box-shadow: 3px 3px 3px #d3cccc;
+  height: 68px; }
+  .menu__vignette:hover {
+    width: 78%;
+    animation-fill-mode: forwards; }
+    .menu__vignette:hover .checkbox {
+      opacity: 1; }
+    .menu__vignette:hover h3 {
+      width: 90%; }
+    .menu__vignette:hover .aside {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 75%; }
 
 .menu__title {
   display: flex;
@@ -444,6 +457,18 @@ figcaption {
     top: 0px;
     bottom: 0px;
     margin-right: 0px; }
+
+.menu h3 {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 12px; }
+
+.with {
+  display: flex;
+  align-items: center;
+  height: 25px; }
 
 .menu h1 {
   font-size: x-large; }
@@ -480,37 +505,13 @@ h3 {
     margin-left: 0px; }
 
   .menu__container {
-    column-gap: 25px; }
+    column-gap: 20px; }
 
   .section__container {
     margin-left: 0px; }
 
-  .menu__vignette {
-    height: 68px; }
-    .menu__vignette:hover {
-      width: 74%;
-      animation-fill-mode: forwards; }
-      .menu__vignette:hover .checkbox {
-        opacity: 1; }
-      .menu__vignette:hover h3 {
-        width: 90%; }
-      .menu__vignette:hover .aside {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        width: 75%; }
-
-  .menu h3 {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin-top: 12px; }
-
-  .with {
-    display: flex;
-    align-items: center;
-    height: 25px; } }
+  .menu__vignette:hover {
+    width: 80%; } }
 @media screen and (max-width: 480px) {
   #body {
     width: 480px;
@@ -600,14 +601,12 @@ h3 {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
-    margin-left: 20px; }
+    width: 100%; }
 
   .menu__vignette {
     width: 320px; }
 
   .menu h2 {
-    align-self: center;
-    margin-left: 20px; } }
+    align-self: center; } }
 
 /*# sourceMappingURL=style.css.map */
