@@ -9,6 +9,12 @@
 @import "./pages/menu";
 
 
+.loading_spinner {
+    background-color: white;
+    width: 300px;
+    animation: loading-spinner 3s 100ms 2 backwards;
+    opacity: 0;
+} 
 
 
 @media screen and (max-width: 480px) /* Smartphones */

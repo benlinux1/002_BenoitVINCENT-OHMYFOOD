@@ -47,3 +47,31 @@
     transform: translateY(0px);
   }
 }
+
+@keyframes loading-spinner {
+  0% {
+    opacity: 0;
+    transform: translateY(9999px);
+  }
+  10%{
+    opacity: 0.4;
+    transform: translateY(10px);
+  }
+  25% {
+    opacity : 0.7;
+    transform: translateY(0px) rotate(90deg);
+
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px) rotate(180deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0px) rotate(270deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) rotate(360deg);
+  }
+}
