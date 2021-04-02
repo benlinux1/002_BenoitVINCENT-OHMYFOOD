@@ -13,6 +13,22 @@
     transform: rotate(270deg); }
   100% {
     transform: rotate(360deg); } }
+@keyframes apparition-prog {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  25% {
+    opacity: 0.25;
+    transform: translateY(7.5px); }
+  50% {
+    opacity: 0.5;
+    transform: translateY(5px); }
+  75% {
+    opacity: 0.75;
+    transform: translateY(2.5px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 /* shrikhand-regular */
 @font-face {
   font-family: 'Shrikhand';
@@ -156,6 +172,7 @@ h2 {
   .button:hover, .order-button:hover {
     transform: perspective(300px) translateZ(4px); }
     .button:hover::after, .order-button:hover::after {
+      content: "";
       opacity: 1;
       transform: scale(1.02); }
   .button::after, .order-button::after {
@@ -188,6 +205,7 @@ h2 {
   position: relative;
   bottom: 10px; }
   .favorite:active::after {
+    content: "";
     opacity: 1; }
   .favorite::after {
     content: "";
@@ -247,32 +265,27 @@ h2 {
   border-bottom-right-radius: 10px 10px;
   position: relative;
   bottom: 60px;
-  left: 50px;
+  left: 35px;
   opacity: 0;
   transition: all 200ms ease-in-out;
   box-shadow: 3px 3px 3px #d3cccc;
   cursor: pointer; }
   .checkbox::after {
+    content: "";
     opacity: 1; }
   .checkbox:active {
-    animation-fill-mode: forwards; }
-    .checkbox:active .checkok {
-      opacity: 1; }
-  .checkbox:hover .checkok {
     opacity: 1; }
-    .checkbox:hover .checkok:active {
-      transform: scale(1.05);
-      animation: check-box;
-      animation-duration: 200ms;
-      animation-fill-mode: both; }
+  .checkbox:hover .checkok:active {
+    animation: check-box;
+    animation-duration: 200ms;
+    animation-fill-mode: both; }
 
 .checkok {
   margin: auto;
   width: 25px;
   filter: invert(100%) sepia(0%) saturate(7449%) hue-rotate(71deg) brightness(107%) contrast(105%);
   transition: all 300ms ease-in-out;
-  animation-fill-mode: both;
-  opacity: 0; }
+  animation-fill-mode: both; }
 
 @media screen and (min-width: 481px) {
   .new {
@@ -282,7 +295,12 @@ h2 {
 
   .favorite {
     position: relative;
-    bottom: 27px; } }
+    bottom: 27px; }
+
+  .checkbox {
+    position: relative;
+    bottom: 60px;
+    left: 52px; } }
 .search {
   margin-top: 10px;
   text-align: center;
@@ -425,27 +443,42 @@ figcaption {
   flex-direction: column;
   align-items: center; }
 
-.menu__vignette {
+.menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
   display: inline-block;
   background-color: #fff;
   margin-bottom: 10px;
-  width: 90%;
+  width: 92%;
   border-radius: 15px 15px;
   padding-left: 15px;
   box-shadow: 3px 3px 3px #d3cccc;
   height: 68px; }
-  .menu__vignette:hover {
-    width: 78%;
-    animation-fill-mode: forwards; }
-    .menu__vignette:hover .checkbox {
+  .menu__vignette1:hover, .menu__vignette2:hover, .menu__vignette3:hover, .menu__vignette4:hover {
+    width: 82.5%; }
+    .menu__vignette1:hover .checkbox, .menu__vignette2:hover .checkbox, .menu__vignette3:hover .checkbox, .menu__vignette4:hover .checkbox {
       opacity: 1; }
-    .menu__vignette:hover h3 {
+    .menu__vignette1:hover h3, .menu__vignette2:hover h3, .menu__vignette3:hover h3, .menu__vignette4:hover h3 {
       width: 90%; }
-    .menu__vignette:hover .aside {
+    .menu__vignette1:hover .aside, .menu__vignette2:hover .aside, .menu__vignette3:hover .aside, .menu__vignette4:hover .aside {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
       width: 75%; }
+  .menu__vignette1:active, .menu__vignette2:active, .menu__vignette3:active, .menu__vignette4:active {
+    width: 78%; }
+    .menu__vignette1:active .checkbox, .menu__vignette2:active .checkbox, .menu__vignette3:active .checkbox, .menu__vignette4:active .checkbox {
+      opacity: 1; }
+
+.menu__vignette1 {
+  animation: apparition-prog 800ms linear 400ms both; }
+
+.menu__vignette2 {
+  animation: apparition-prog 800ms linear 500ms both; }
+
+.menu__vignette3 {
+  animation: apparition-prog 800ms linear 600ms both; }
+
+.menu__vignette4 {
+  animation: apparition-prog 800ms linear 700ms both; }
 
 .menu__title {
   display: flex;
@@ -510,8 +543,10 @@ h3 {
   .section__container {
     margin-left: 0px; }
 
-  .menu__vignette:hover {
-    width: 80%; } }
+  .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
+    width: 100%; }
+    .menu__vignette1:hover, .menu__vignette2:hover, .menu__vignette3:hover, .menu__vignette4:hover {
+      width: 82.5%; } }
 @media screen and (max-width: 480px) {
   #body {
     width: 480px;
