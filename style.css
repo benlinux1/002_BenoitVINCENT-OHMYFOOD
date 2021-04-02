@@ -44,7 +44,7 @@ h1 + p {
 h2 {
   margin-left: 15px; }
 
-h3 + p {
+.with p {
   font-family: 'roboto-light'; }
 
 .price {
@@ -255,7 +255,7 @@ h3 + p {
   border-top-right-radius: 10px 10px;
   border-bottom-right-radius: 10px 10px;
   position: relative;
-  bottom: 68px;
+  bottom: 60px;
   left: 60px;
   opacity: 0;
   transition: all 200ms ease-in-out;
@@ -458,20 +458,14 @@ h3 {
   margin-top: 10px; }
 
 .aside {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5px;
   width: 100%;
-  flex-shrink: 2;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
 
 .price {
-  margin-right: 30px;
-  margin-left: 10px;
-  flex-wrap: nowrap; }
+  margin-right: 20px;
+  margin-left: 10px; }
 
 @media screen and (min-width: 481px) {
   .picture img {
@@ -498,15 +492,25 @@ h3 {
       animation-fill-mode: forwards; }
       .menu__vignette:hover .checkbox {
         opacity: 1; }
-      .menu__vignette:hover .aside:not(.price) {
+      .menu__vignette:hover h3 {
+        width: 90%; }
+      .menu__vignette:hover .aside {
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        width: 75%; }
 
   .menu h3 {
+    display: block;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; } }
+    text-overflow: ellipsis;
+    margin-top: 12px; }
+
+  .with {
+    display: flex;
+    align-items: center;
+    height: 25px; } }
 @media screen and (max-width: 480px) {
   #body {
     width: 480px;
