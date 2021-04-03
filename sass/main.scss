@@ -9,17 +9,32 @@
 @import "./pages/menu";
 
 
-.loading_spinner {
-    background-color: white;
-    width: 300px;
-    animation: loading-spinner 3s 100ms 2 backwards;
+.loading {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    animation-name: disparition;
+    animation-duration: 4500ms;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #fff;
+    transition: all 500ms;
+    z-index: -10;
+}
+
+.loading__spinner {
     opacity: 0;
-} 
+    width: 60%;
+    margin: auto;
+    animation: loading-spinner 1500ms 100ms 3 forwards;
+}
 
 
 @media screen and (max-width: 480px) /* Smartphones */
 {
-
     #body {
         width: 480px;
         overflow: hidden;
