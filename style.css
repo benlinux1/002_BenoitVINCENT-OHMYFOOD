@@ -119,6 +119,17 @@
     opacity: 0;
     transform: rotate(0deg) scale(0);
     display: none; } }
+@keyframes coloration-prog {
+  0% {
+    opacity: 0.3; }
+  25% {
+    opacity: 0.5; }
+  50% {
+    opacity: 0.7; }
+  75% {
+    opacity: 0.9; }
+  100% {
+    opacity: 1; } }
 /* shrikhand-regular */
 @font-face {
   font-family: 'Shrikhand';
@@ -288,14 +299,21 @@ h2 {
   z-index: 1;
   position: relative;
   bottom: 10px;
-  display: flex;
   background-clip: text;
   width: 20px;
   height: 20px; }
 
 .favorite i {
   color: black;
-  font-size: 20px; }
+  font-size: 20px;
+  cursor: pointer; }
+  .favorite i:hover {
+    background: linear-gradient(#FF79DA, 75%, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    animation: coloration-prog 1s forwards; }
 
 .order-button :not(.favorite) {
   display: block;
