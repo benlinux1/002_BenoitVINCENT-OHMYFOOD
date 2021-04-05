@@ -45,44 +45,22 @@
 }
 
 .favorite {
-    background-image: url(./images/icons/heart.svg);
-    background-color: transparent;
-    background-repeat: no-repeat;
     border: none;
-    width: 20px;
-    height: 20px;
     float: right;
     margin-right: 20px;
     opacity: 1;
     z-index: 1;
-    transition: all 1000ms ease-in-out;
     position: relative;
     bottom: 10px;
-    &:active {
-        &::after {
-            content: "";
-            opacity: 1;
-        }
-    }
-    &::after {
-        content: "";
-        display: block;
-        background-image: url(./images/icons/heart-solid.svg);
-        filter: invert(65%) sepia(36%) saturate(1279%) hue-rotate(285deg) brightness(95%) contrast(101%);
-        border: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        transform: scale(1);
-        z-index: 0;
-        transition: all 800ms;
-        &:hover {
-            transform: scale(1.08);
-        }
-    }
+    display: flex;
+    background-clip: text;
+    width: 20px;
+    height: 20px;
+}
+
+.favorite i {
+    color: black;
+    font-size: 20px;
 }
 
 .order-button :not(.favorite)
@@ -115,13 +93,6 @@
     & span {
         margin: auto;
     }
-}
-
-.fa-heart {
-    background: linear-gradient($color-secondary, 75%, $color-primary);
-    background-clip: text;
-    font-weight: bold;
-    color: aqua;
 }
 
 .checkbox {
