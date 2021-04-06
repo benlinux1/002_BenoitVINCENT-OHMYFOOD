@@ -306,17 +306,19 @@ h2 {
   position: absolute;
   left: -9999px; }
 
-input:checked + label i::before {
-  opacity: 1;
-  font-size: 20px; }
-input:checked + label i::after {
-  opacity: 1; }
+.favorite input:checked + label {
+  width: 30px; }
+  .favorite input:checked + label i::before {
+    opacity: 1;
+    font-size: 20px; }
+  .favorite input:checked + label i::after {
+    opacity: 1; }
 
-.favorite i {
+.favorite > label > i {
   color: black;
   font-size: 20px;
   cursor: pointer; }
-  .favorite i::before {
+  .favorite > label > i::before {
     content: "\f004";
     color: black;
     font-size: 20px;
@@ -325,7 +327,7 @@ input:checked + label i::after {
     position: absolute;
     top: 0;
     left: 0px; }
-  .favorite i::after {
+  .favorite > label > i::after {
     content: "\f004";
     background: linear-gradient(#FF79DA, 75%, #9356DC);
     background-clip: text;
@@ -339,7 +341,7 @@ input:checked + label i::after {
     left: 1.75px;
     transition: 1s ease-in-out; }
 
-.order-button :not(.favorite) {
+.order-button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -408,21 +410,6 @@ input:checked + label i::after {
   .favorite {
     position: relative;
     bottom: 27px; }
-
-  .favorite i {
-    color: black;
-    font-size: 20px;
-    cursor: pointer; }
-    .favorite i:hover::before {
-      opacity: 1;
-      font-size: 20px; }
-    .favorite i:hover::after {
-      opacity: 1;
-      font-size: 16.5px;
-      animation: coloration-prog 1s forwards;
-      position: absolute;
-      top: 1.7px;
-      left: 1.8px; }
 
   .checkbox {
     position: relative;
