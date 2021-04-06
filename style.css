@@ -684,7 +684,7 @@ h3 {
 
 .loading__spinner {
   opacity: 0;
-  width: 60%;
+  width: 50%;
   margin: auto;
   animation: loading-spinner 1200ms 100ms 4 forwards; }
 
@@ -707,6 +707,11 @@ h3 {
   .section__container {
     margin-left: 15px; } }
 @media screen and (min-width: 481px) {
+  .loading__spinner {
+    position: relative;
+    bottom: 200px;
+    width: 40%; }
+
   .search button {
     margin-top: 0px; }
 
