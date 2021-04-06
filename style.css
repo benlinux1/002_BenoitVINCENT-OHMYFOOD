@@ -311,11 +311,11 @@ h2 {
     font-size: 20px; }
   .favorite i:hover::after {
     opacity: 1;
-    font-size: 16px;
+    font-size: 16.5px;
     animation: coloration-prog 1s forwards;
     position: absolute;
-    top: 2px;
-    left: 2px; }
+    top: 1.7px;
+    left: 1.8px; }
   .favorite i::before {
     content: "\f004";
     color: black;
