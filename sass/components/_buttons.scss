@@ -56,24 +56,27 @@
     height: 20px;
 }
 
-.favorite i {
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    &:hover {
+.favorite input {
+    position: absolute;
+    left: -9999px;
+}
+
+input:checked + label {
+    & i {
         &::before {
             opacity: 1;
             font-size: 20px;
         }
         &::after {
             opacity: 1;
-            font-size: 16.5px;
-            animation: coloration-prog 1s forwards;
-            position: absolute;
-            top: 1.7px;
-            left: 1.8px;
         }
     }
+}
+
+.favorite i {
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
     &::before {
         content: "\f004";
         color: black;
@@ -89,13 +92,14 @@
         background: linear-gradient($color-secondary, 75%, $color-primary);
         background-clip: text;
         -webkit-background-clip: text;
-        font-size: 20px;
+        font-size: 17px;
         color: transparent;
         font-weight: bold;
         opacity: 0;
         position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 1.5px;
+        left: 1.75px;
+        transition: 1s ease-in-out;
     }
 }
 
@@ -183,6 +187,25 @@
     .favorite {
         position: relative;
         bottom: 27px;
+    }
+    .favorite i {
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            &::before {
+                opacity: 1;
+                font-size: 20px;
+            }
+            &::after {
+                opacity: 1;
+                font-size: 16.5px;
+                animation: coloration-prog 1s forwards;
+                position: absolute;
+                top: 1.7px;
+                left: 1.8px;
+            }
+        }
     }
 
     .checkbox {
