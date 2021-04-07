@@ -194,3 +194,24 @@
     opacity: 1;
   }
 }
+
+@keyframes apparition-checkbox {
+  0% {
+    transform: translateX(9999px);
+  }
+  10% {
+    transform: translateX(400px);
+  }
+  20% {
+    transform: translateX(50px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

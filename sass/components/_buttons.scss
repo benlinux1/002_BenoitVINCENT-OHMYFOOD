@@ -56,7 +56,7 @@
     height: 20px;
 }
 
-.favorite input {
+.favorite input, .section__container input {
     position: absolute;
     left: -9999px;
 }
@@ -136,36 +136,39 @@
     }
 }
 
+.section__container input:checked + label {
+    & .menu__vignette1, & .menu__vignette2, & .menu__vignette3, & .menu__vignette4, & .menu__vignette5, & .menu__vignette6, & .menu__vignette7, & .menu__vignette8, & .menu__vignette9, & .menu__vignette10 {
+        width: 78%;
+    }
+    & .checkbox {
+        opacity: 1;
+        animation: apparition-checkbox 200ms ease-out both;
+        & .checkok {
+            animation: check-box 200ms linear 200ms;
+        }
+    }
+}
+
 .checkbox {
     float: right;
     display: flex;
     background-color: $color-tertiary;
-    width: 60px;
+    width: 55px;
     height: 68px;
+    justify-content: center;
+    align-items: center;
     border-top-right-radius: 10px 10px;
     border-bottom-right-radius: 10px 10px;
     position: relative;
     bottom: 60px;
-    left: 35px;
+    left: 42px;
     opacity: 0;
-    transition: all 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out;
     @include box-shadow;
     cursor: pointer;
     &::after {
         content: "";
         opacity: 1;
-    }
-    &:active {
-        opacity: 1;
-    }
-    &:hover {
-        & .checkok {
-            &:active {
-                animation: check-box;
-                animation-duration: 200ms;
-                animation-fill-mode: both;
-            }
-        }
     }
 }
 
@@ -190,7 +193,14 @@
         bottom: 27px;
     }
 
+    .section__container input:checked + label {
+        & .menu__vignette1, & .menu__vignette2, & .menu__vignette3, & .menu__vignette4, & .menu__vignette5, & .menu__vignette6, & .menu__vignette7, & .menu__vignette8, & .menu__vignette9, & .menu__vignette10 {
+            width: 83%;
+        }
+    }
+
     .checkbox {
+        width: 62px;
         position: relative;
         bottom: 60px;
         left: 52px;

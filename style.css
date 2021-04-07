@@ -130,6 +130,19 @@
     opacity: 0.9; }
   100% {
     opacity: 1; } }
+@keyframes apparition-checkbox {
+  0% {
+    transform: translateX(9999px); }
+  10% {
+    transform: translateX(400px); }
+  20% {
+    transform: translateX(50px); }
+  40% {
+    transform: translateX(10px); }
+  50% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(0px); } }
 /* shrikhand-regular */
 @font-face {
   font-family: 'Shrikhand';
@@ -302,7 +315,7 @@ h2 {
   width: 20px;
   height: 20px; }
 
-.favorite input {
+.favorite input, .section__container input {
   position: absolute;
   left: -9999px; }
 
@@ -369,30 +382,34 @@ h2 {
   .new span {
     margin: auto; }
 
+.section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
+  width: 78%; }
+.section__container input:checked + label .checkbox {
+  opacity: 1;
+  animation: apparition-checkbox 200ms ease-out both; }
+  .section__container input:checked + label .checkbox .checkok {
+    animation: check-box 200ms linear 200ms; }
+
 .checkbox {
   float: right;
   display: flex;
   background-color: #99E2D0;
-  width: 60px;
+  width: 55px;
   height: 68px;
+  justify-content: center;
+  align-items: center;
   border-top-right-radius: 10px 10px;
   border-bottom-right-radius: 10px 10px;
   position: relative;
   bottom: 60px;
-  left: 35px;
+  left: 42px;
   opacity: 0;
-  transition: all 200ms ease-in-out;
+  transition: opacity 200ms ease-in-out;
   box-shadow: 3px 3px 3px #d3cccc;
   cursor: pointer; }
   .checkbox::after {
     content: "";
     opacity: 1; }
-  .checkbox:active {
-    opacity: 1; }
-  .checkbox:hover .checkok:active {
-    animation: check-box;
-    animation-duration: 200ms;
-    animation-fill-mode: both; }
 
 .checkok {
   margin: auto;
@@ -411,7 +428,11 @@ h2 {
     position: relative;
     bottom: 27px; }
 
+  .section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
+    width: 83%; }
+
   .checkbox {
+    width: 62px;
     position: relative;
     bottom: 60px;
     left: 52px; } }
@@ -570,26 +591,11 @@ figcaption {
   display: inline-block;
   background-color: #fff;
   margin-bottom: 10px;
-  width: 92%;
+  width: 90%;
   border-radius: 15px 15px;
   padding-left: 15px;
   box-shadow: 3px 3px 3px #d3cccc;
   height: 68px; }
-  .menu__vignette1:hover, .menu__vignette2:hover, .menu__vignette3:hover, .menu__vignette4:hover {
-    width: 82.5%; }
-    .menu__vignette1:hover .checkbox, .menu__vignette2:hover .checkbox, .menu__vignette3:hover .checkbox, .menu__vignette4:hover .checkbox {
-      opacity: 1; }
-    .menu__vignette1:hover h3, .menu__vignette2:hover h3, .menu__vignette3:hover h3, .menu__vignette4:hover h3 {
-      width: 90%; }
-    .menu__vignette1:hover .aside, .menu__vignette2:hover .aside, .menu__vignette3:hover .aside, .menu__vignette4:hover .aside {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      width: 75%; }
-  .menu__vignette1:active, .menu__vignette2:active, .menu__vignette3:active, .menu__vignette4:active {
-    width: 78%; }
-    .menu__vignette1:active .checkbox, .menu__vignette2:active .checkbox, .menu__vignette3:active .checkbox, .menu__vignette4:active .checkbox {
-      opacity: 1; }
 
 .menu__vignette1 {
   animation: apparition-prog 800ms linear 400ms both; }
@@ -660,6 +666,10 @@ h3 {
   .menu h2 {
     margin-left: 0px; }
 
+  .menu h3 {
+    /* Permet ellipsis propre */
+    padding-right: 15px; }
+
   .menu__container {
     column-gap: 20px; }
 
@@ -667,9 +677,7 @@ h3 {
     margin-left: 0px; }
 
   .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
-    width: 100%; }
-    .menu__vignette1:hover, .menu__vignette2:hover, .menu__vignette3:hover, .menu__vignette4:hover {
-      width: 82.5%; } }
+    width: 100%; } }
 .loading {
   display: flex;
   text-align: center;

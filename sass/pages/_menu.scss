@@ -24,32 +24,11 @@
     display: inline-block;
     background-color: #fff;
     margin-bottom: 10px;
-    width: 92%;
+    width: 90%;
     border-radius: 15px 15px;
     padding-left: 15px;
     @include box-shadow;
     height: 68px;
-    &:hover {
-        width: 82.5%;
-        & .checkbox {
-            opacity: 1;
-        }
-        & h3 {
-            width: 90%;
-        }
-        & .aside {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow : ellipsis;
-            width: 75%;
-        }
-    }
-    &:active {
-        width: 78%;
-        & .checkbox {
-            opacity: 1;
-        }
-    }
 }
 
 .menu__vignette1 {
@@ -133,6 +112,10 @@ h3 {
     .menu h2 {
         margin-left: 0px;
     }
+
+    .menu h3 { /* Permet ellipsis propre */
+        padding-right: 15px;
+    }
     .menu__container {
         column-gap: 20px;
     }
@@ -143,8 +126,5 @@ h3 {
 
     .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
         width: 100%;
-        &:hover {
-            width: 82.5%;
-        }
     }
 }
