@@ -344,7 +344,6 @@ h2 {
     content: "\f004";
     background: linear-gradient(#FF79DA, 75%, #9356DC);
     font-size: 17px;
-    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
