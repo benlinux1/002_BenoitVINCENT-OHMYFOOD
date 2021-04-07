@@ -158,7 +158,7 @@
   font-family: 'roboto-light';
   src: url(fonts/roboto/roboto-regular.eot) format("embedded-opentype"), url(fonts/roboto/roboto-regular.woff2) format("woff2"), url(fonts/roboto/roboto-regular.woff) format("woff"), url(fonts/roboto/roboto-regular.ttf) format("truetype"), url(fonts/roboto/roboto-regular.svg) format("svg");
   /* Legacy iOS */ }
-.logo, h1, h2, h3 {
+.logo, h1, h2, h3, label {
   font-family: 'Shrikhand';
   font-size: medium; }
 
