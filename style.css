@@ -343,16 +343,17 @@ h2 {
   .favorite > label > i::after {
     content: "\f004";
     background: linear-gradient(#FF79DA, 75%, #9356DC);
+    font-size: 17px;
     background-clip: text;
     -webkit-background-clip: text;
-    font-size: 17px;
+    -moz-background-clip: text;
     color: transparent;
     font-weight: bold;
     opacity: 0;
     position: absolute;
     top: 1.5px;
     left: 1.75px;
-    transition: 1s ease-in-out; }
+    transition: 1s ease; }
 
 .order-button {
   display: block;

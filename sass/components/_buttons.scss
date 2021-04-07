@@ -91,16 +91,17 @@
     &::after {
         content: "\f004";
         background: linear-gradient($color-secondary, 75%, $color-primary);
+        font-size: 17px;
         background-clip: text;
         -webkit-background-clip: text;
-        font-size: 17px;
+        -moz-background-clip: text;
         color: transparent;
         font-weight: bold;
         opacity: 0;
         position: absolute;
         top: 1.5px;
         left: 1.75px;
-        transition: 1s ease-in-out;
+        transition: 1s ease;
     }
 }
 
