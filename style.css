@@ -388,7 +388,7 @@ h2 {
   opacity: 1;
   animation: apparition-checkbox 200ms ease-out both; }
   .section__container input:checked + label .checkbox .checkok {
-    animation: check-box 200ms linear 200ms; }
+    animation: check-box 200ms linear 100ms; }
 
 .checkbox {
   float: right;
@@ -595,7 +595,8 @@ figcaption {
   border-radius: 15px 15px;
   padding-left: 15px;
   box-shadow: 3px 3px 3px #d3cccc;
-  height: 68px; }
+  height: 68px;
+  cursor: pointer; }
 
 .menu__vignette1 {
   animation: apparition-prog 800ms linear 400ms both; }

@@ -144,7 +144,7 @@
         opacity: 1;
         animation: apparition-checkbox 200ms ease-out both;
         & .checkok {
-            animation: check-box 200ms linear 200ms;
+            animation: check-box 200ms linear 100ms;
         }
     }
 }
