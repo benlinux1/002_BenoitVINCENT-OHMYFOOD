@@ -443,14 +443,16 @@ h2 {
     position: relative;
     bottom: 27px; }
 
+  .menu section {
+    width: 320px; }
+
   .section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
     width: 83%; }
 
   .checkbox {
     width: 62px;
     position: relative;
-    bottom: 60px;
-    left: 52px; } }
+    bottom: 60px; } }
 .search {
   margin-top: 10px;
   text-align: center;
