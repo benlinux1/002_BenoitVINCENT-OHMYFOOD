@@ -136,18 +136,35 @@
     }
 }
 
-.section__container input:checked + label {
-    & .menu__vignette1, & .menu__vignette2, & .menu__vignette3, & .menu__vignette4, & .menu__vignette5, & .menu__vignette6, & .menu__vignette7, & .menu__vignette8, & .menu__vignette9, & .menu__vignette10 {
-        width: 78%;
+.menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
+    label {
+        display: inline-block;
+        width: 320px;
+        height: 68px;
+        z-index: 5;
+        position: absolute;
+        top: 0px;
+        left: 0px;
     }
-    & .checkbox {
-        opacity: 1;
-        animation: apparition-checkbox 200ms ease-out both;
-        & .checkok {
-            animation: check-box 200ms linear 100ms;
+}
+ 
+.menu__vignette1 input:checked + label, .menu__vignette2 input:checked + label, 
+.menu__vignette3 input:checked + label, .menu__vignette4 input:checked + label {
+    + h3 {
+        width: 80%;
+        + .with {
+            width: 80%;
+            + .checkbox {
+                opacity: 1;
+                animation: apparition-checkbox 200ms ease-out both;
+                & .checkok {
+                    animation: check-box 200ms linear 100ms;
+                }
+            }
         }
     }
 }
+
 
 .checkbox {
     float: right;
@@ -161,7 +178,7 @@
     border-bottom-right-radius: 10px 10px;
     position: relative;
     bottom: 60px;
-    left: 42px;
+    left: 0px;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     @include box-shadow;

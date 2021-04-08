@@ -382,13 +382,28 @@ h2 {
   .new span {
     margin: auto; }
 
-.section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
-  width: 78%; }
-.section__container input:checked + label .checkbox {
-  opacity: 1;
-  animation: apparition-checkbox 200ms ease-out both; }
-  .section__container input:checked + label .checkbox .checkok {
-    animation: check-box 200ms linear 100ms; }
+.menu__vignette1 label, .menu__vignette2 label, .menu__vignette3 label, .menu__vignette4 label {
+  display: inline-block;
+  width: 320px;
+  height: 68px;
+  z-index: 5;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.menu__vignette1 input:checked + label + h3, .menu__vignette2 input:checked + label + h3,
+.menu__vignette3 input:checked + label + h3, .menu__vignette4 input:checked + label + h3 {
+  width: 80%; }
+  .menu__vignette1 input:checked + label + h3 + .with, .menu__vignette2 input:checked + label + h3 + .with,
+  .menu__vignette3 input:checked + label + h3 + .with, .menu__vignette4 input:checked + label + h3 + .with {
+    width: 80%; }
+    .menu__vignette1 input:checked + label + h3 + .with + .checkbox, .menu__vignette2 input:checked + label + h3 + .with + .checkbox,
+    .menu__vignette3 input:checked + label + h3 + .with + .checkbox, .menu__vignette4 input:checked + label + h3 + .with + .checkbox {
+      opacity: 1;
+      animation: apparition-checkbox 200ms ease-out both; }
+      .menu__vignette1 input:checked + label + h3 + .with + .checkbox .checkok, .menu__vignette2 input:checked + label + h3 + .with + .checkbox .checkok,
+      .menu__vignette3 input:checked + label + h3 + .with + .checkbox .checkok, .menu__vignette4 input:checked + label + h3 + .with + .checkbox .checkok {
+        animation: check-box 200ms linear 100ms; }
 
 .checkbox {
   float: right;
@@ -402,7 +417,7 @@ h2 {
   border-bottom-right-radius: 10px 10px;
   position: relative;
   bottom: 60px;
-  left: 42px;
+  left: 0px;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
   box-shadow: 3px 3px 3px #d3cccc;
@@ -587,6 +602,10 @@ figcaption {
   flex-direction: column;
   align-items: center; }
 
+.section__container {
+  position: relative;
+  top: 0px; }
+
 .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
   display: inline-block;
   background-color: #fff;
@@ -596,7 +615,10 @@ figcaption {
   padding-left: 15px;
   box-shadow: 3px 3px 3px #d3cccc;
   height: 68px;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  /* Permet le placement du label */
+  top: 0px; }
 
 .menu__vignette1 {
   animation: apparition-prog 800ms linear 400ms both; }
