@@ -29,6 +29,9 @@
     animation: loading-spinner 1200ms 100ms 4 forwards;
 }
 
+#a:hover ~ #step-colored {
+    background-color: $color-secondary;
+}
 
 @media screen and (max-width: 480px) /* Smartphones */
 {
@@ -100,7 +103,7 @@
             margin-left: 25px;
         }
         &__name {
-            margin-left: 10px;
+            margin-left: 12px;
             width: 160px;
         }
     }

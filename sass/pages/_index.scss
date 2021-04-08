@@ -38,18 +38,18 @@
     justify-content: flex-start;
     flex-shrink: 2; /* utile pour écrans <280px */
     align-items: center;
+    align-content: center;
     width: 340px;
     border-radius: 20px 20px;
     background-color: $background-color-primary;
     @include box-shadow;
-    &__icon {
-        margin-left: 50px;
-        width: 12px;
-        height: 12px;
-    }
     &__name {
         margin-left: 40px;
-        font-weight: bold;
+    }
+    & i {
+        font-size: 15px;
+        color: black;
+        margin-left: 30px;
     }
 }
 

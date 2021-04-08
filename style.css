@@ -483,17 +483,17 @@ h2 {
   flex-shrink: 2;
   /* utile pour écrans <280px */
   align-items: center;
+  align-content: center;
   width: 340px;
   border-radius: 20px 20px;
   background-color: #f2f2f2;
   box-shadow: 3px 3px 3px #d3cccc; }
-  .step__icon {
-    margin-left: 50px;
-    width: 12px;
-    height: 12px; }
   .step__name {
-    margin-left: 40px;
-    font-weight: bold; }
+    margin-left: 40px; }
+  .step i {
+    font-size: 15px;
+    color: black;
+    margin-left: 30px; }
 
 .step--mod {
   display: flex;
@@ -718,6 +718,9 @@ h3 {
   margin: auto;
   animation: loading-spinner 1200ms 100ms 4 forwards; }
 
+#a:hover ~ #step-colored {
+  background-color: #FF79DA; }
+
 @media screen and (max-width: 480px) {
   #body {
     width: 480px;
@@ -773,7 +776,7 @@ h3 {
     .step__icon, .step--mod__icon {
       margin-left: 25px; }
     .step__name, .step--mod__name {
-      margin-left: 10px;
+      margin-left: 12px;
       width: 160px; }
 
   .restaurants__container {
