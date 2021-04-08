@@ -714,7 +714,7 @@ h3 {
 
 .loading__spinner {
   opacity: 0;
-  width: 50%;
+  width: 15%;
   margin: auto;
   animation: loading-spinner 1200ms 100ms 4 forwards; }
 
