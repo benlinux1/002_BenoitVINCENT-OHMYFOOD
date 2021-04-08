@@ -384,7 +384,7 @@ h2 {
 
 .menu__vignette1 label, .menu__vignette2 label, .menu__vignette3 label, .menu__vignette4 label {
   display: inline-block;
-  width: 320px;
+  width: 100%;
   height: 68px;
   z-index: 5;
   position: absolute;
@@ -442,9 +442,6 @@ h2 {
   .favorite {
     position: relative;
     bottom: 27px; }
-
-  .menu section {
-    width: 320px; }
 
   .section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
     width: 83%; }
@@ -808,7 +805,8 @@ h3 {
     justify-content: space-around; }
 
   .menu section {
-    display: inline-block; }
+    display: inline-block;
+    width: 335px; }
 
   .section__container {
     display: flex;
