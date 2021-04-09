@@ -738,7 +738,9 @@ h3 {
     align-items: center; }
 
   .section__container {
-    margin-left: 15px; } }
+    margin-left: 15px;
+  }
+
 @media screen and (min-width: 481px) {
   .loading__spinner {
     position: relative;

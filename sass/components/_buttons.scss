@@ -176,12 +176,11 @@
     align-items: center;
     border-top-right-radius: 10px 10px;
     border-bottom-right-radius: 10px 10px;
-    position: relative;
-    bottom: 60px;
-    left: 0px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
     opacity: 0;
     transition: opacity 200ms ease-in-out;
-    @include box-shadow;
     cursor: pointer;
     &::after {
         content: "";
