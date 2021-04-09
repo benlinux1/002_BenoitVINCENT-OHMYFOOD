@@ -15,7 +15,3 @@ $background-color-secondary: rgb(211, 204, 204);
 
 
 $list1: $color-secondary 0%,$color-secondary 75%, $color-primary 100%;
-
-@mixin gradient($direction, $list) { 
-    background: linear-gradient($direction, $list);
-}

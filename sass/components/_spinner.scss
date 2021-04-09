@@ -1,0 +1,29 @@
+.loading {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    animation-name: disparition;
+    animation-duration: 5000ms;
+    animation-fill-mode: forwards;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.loading__spinner {
+    opacity: 0;
+    width: 50%;
+    margin: auto;
+    animation: loading-spinner 1200ms 100ms 4 forwards;
+}
+
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .loading__spinner {
+    position: relative;
+    bottom: 200px;
+    width: 40%;
+    }
+}

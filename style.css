@@ -415,12 +415,11 @@ h2 {
   align-items: center;
   border-top-right-radius: 10px 10px;
   border-bottom-right-radius: 10px 10px;
-  position: relative;
-  bottom: 60px;
-  left: 0px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
-  box-shadow: 3px 3px 3px #d3cccc;
   cursor: pointer; }
   .checkbox::after {
     content: "";
@@ -447,9 +446,7 @@ h2 {
     width: 83%; }
 
   .checkbox {
-    width: 62px;
-    position: relative;
-    bottom: 60px; } }
+    width: 62px; } }
 .search {
   margin-top: 10px;
   text-align: center;
@@ -471,10 +468,18 @@ h2 {
     width: 140px;
     margin-left: 15px; }
 
+.search p {
+  width: 80%;
+  margin: auto;
+  font-size: 0.8em; }
+
 .method {
   margin-top: 20px; }
 
 .step__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px; }
 
 .step {
@@ -582,6 +587,63 @@ figcaption {
   margin-left: 10px;
   display: inline; }
 
+@media screen and (min-width: 481px) {
+  .search button {
+    margin-top: 0px; }
+
+  .method {
+    margin-bottom: 10px; }
+
+  .method__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around; }
+
+  .step__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; }
+
+  .step__number {
+    margin-top: 0px;
+    z-index: 1; }
+
+  .step, .step--mod {
+    width: 230px;
+    min-width: 230px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-align: center; }
+    .step__icon, .step--mod__icon {
+      margin-left: 25px; }
+    .step__name, .step--mod__name {
+      margin-left: 12px;
+      width: 160px; }
+
+  .restaurants__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 20px; }
+
+  .restaurants a {
+    display: inline-block; }
+
+  .restaurants__vignette {
+    width: 240px;
+    height: 165px; }
+
+  .restaurants__vignette__picture {
+    width: 240px;
+    height: 120px; }
+
+  figcaption {
+    margin-top: 2px; } }
 .picture > img {
   width: 100%;
   position: relative;
@@ -603,7 +665,8 @@ figcaption {
 
 .section__container {
   position: relative;
-  top: 0px; }
+  top: 0px;
+  margin-left: 15px; }
 
 .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
   display: inline-block;
@@ -693,13 +756,27 @@ h3 {
     padding-right: 15px; }
 
   .menu__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     column-gap: 20px; }
+
+  .menu section {
+    display: inline-block;
+    width: 335px; }
+
+  .section__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; }
 
   .section__container {
     margin-left: 0px; }
 
   .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
-    width: 100%; } }
+    width: 320px; } }
 .loading {
   display: flex;
   text-align: center;
@@ -714,116 +791,19 @@ h3 {
 
 .loading__spinner {
   opacity: 0;
-  width: 15%;
+  width: 50%;
   margin: auto;
   animation: loading-spinner 1200ms 100ms 4 forwards; }
-
-#a:hover ~ #step-colored {
-  background-color: #FF79DA; }
-
-@media screen and (max-width: 480px) {
-  #body {
-    width: 480px;
-    overflow: hidden;
-    margin: auto; }
-
-  .search p {
-    width: 80%;
-    margin: auto;
-    font-size: 0.8em; }
-
-  .step__container {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-  .section__container {
-    margin-left: 15px;
-  }
 
 @media screen and (min-width: 481px) {
   .loading__spinner {
     position: relative;
     bottom: 200px;
-    width: 40%; }
-
-  .search button {
-    margin-top: 0px; }
-
-  .method {
-    margin-bottom: 10px; }
-
-  .method__container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around; }
-
-  .step__container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; }
-
-  .step__number {
-    margin-top: 0px;
-    z-index: 1; }
-
-  .step, .step--mod {
-    width: 230px;
-    min-width: 230px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    text-align: center; }
-    .step__icon, .step--mod__icon {
-      margin-left: 25px; }
-    .step__name, .step--mod__name {
-      margin-left: 12px;
-      width: 160px; }
-
-  .restaurants__container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 20px; }
-
-  .restaurants a {
-    display: inline-block; }
-
-  .restaurants__vignette {
-    width: 240px;
-    height: 165px; }
-
-  .restaurants__vignette__picture {
-    width: 240px;
-    height: 120px; }
-
-  figcaption {
-    margin-top: 2px; }
-
-  .menu__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-
-  .menu section {
-    display: inline-block;
-    width: 335px; }
-
-  .section__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%; }
-
-  .menu__vignette {
-    width: 320px; }
-
-  .menu h2 {
-    align-self: center; } }
+    width: 40%; } }
+@media screen and (max-width: 480px) {
+  #body {
+    width: 480px;
+    overflow: hidden;
+    margin: auto; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,37 +1,13 @@
-@import "./utils/functions";
-@import "./utils/variables";
-@import "./base/fonts";
-@import "./base/icons";
-@import "./layouts/header";
-@import "./layouts/footer";
-@import "./components/buttons";
-@import "./pages/index";
-@import "./pages/menu";
-
-
-.loading {
-    display: flex;
-    text-align: center;
-    align-items: center;
-    animation-name: disparition;
-    animation-duration: 5000ms;
-    animation-fill-mode: forwards;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-}
-
-.loading__spinner {
-    opacity: 0;
-    width: 50%;
-    margin: auto;
-    animation: loading-spinner 1200ms 100ms 4 forwards;
-}
-
-#a:hover ~ #step-colored {
-    background-color: $color-secondary;
-}
+@import "utils/functions";
+@import "utils/variables";
+@import "base/fonts";
+@import "base/icons";
+@import "layouts/header";
+@import "layouts/footer";
+@import "components/buttons";
+@import "pages/index";
+@import "pages/menu";
+@import "components/spinner";
 
 @media screen and (max-width: 480px) /* Smartphones */
 {
@@ -39,127 +15,5 @@
         width: 480px;
         overflow: hidden;
         margin: auto;
-    }
-
-    .search p {
-        width: 80%;
-        margin: auto;
-        font-size: 0.8em;
-    }
-
-    .step__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section__container {
-        margin-left: 15px;
-    }
-}
-
-
-@media screen and (min-width: 481px) /* Tablettes */
-{
-    .loading__spinner {
-    position: relative;
-    bottom: 200px;
-    width: 40%;
-    }
-    .search button {
-        margin-top: 0px;
-    }
-
-    .method {
-        margin-bottom: 10px;
-    }
-
-    .method__container {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-content: space-around;
-    }
-
-    .step__container {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .step__number {
-        margin-top: 0px;
-        z-index: 1;
-    }
-
-    .step, .step--mod {
-        width: 230px;
-        min-width: 230px;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        text-align: center;
-        &__icon {
-            margin-left: 25px;
-        }
-        &__name {
-            margin-left: 12px;
-            width: 160px;
-        }
-    }
-
-    .restaurants__container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        column-gap: 20px;
-        row-gap: 20px;
-        margin-top: 20px;
-    }
-
-    .restaurants a {
-        display: inline-block;
-    }
-
-    .restaurants__vignette {
-        width: 240px;
-        height: 165px;
-    }
-
-    .restaurants__vignette__picture {
-        width: 240px;
-        height: 120px;
-    }
-
-    figcaption {
-        margin-top: 2px;
-    }
-
-    .menu__container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .menu section {
-        display: inline-block;
-        width: 335px;
-    }
-
-    .section__container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .menu__vignette {
-        width: 320px;
-    }
-
-    .menu h2 {
-        align-self: center;
     }
 }
