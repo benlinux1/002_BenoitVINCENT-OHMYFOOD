@@ -218,14 +218,15 @@ figcaption {
 
     .restaurants a {
         display: block;
-        &:hover {
-            transform: scale(1.05);
-        }
     }
 
     .restaurants__vignette {
         width: 240px;
         height: 165px;
+        transition: all 300ms;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     .restaurants__vignette__picture {

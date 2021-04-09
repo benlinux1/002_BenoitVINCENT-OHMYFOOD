@@ -383,13 +383,14 @@ h2 {
     margin: auto; }
 
 .menu__vignette1 label, .menu__vignette2 label, .menu__vignette3 label, .menu__vignette4 label {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 68px;
   z-index: 5;
   position: absolute;
   top: 0px;
-  left: 0px; }
+  left: 0px;
+  cursor: pointer; }
 
 .menu__vignette1 input:checked + label + h3, .menu__vignette2 input:checked + label + h3,
 .menu__vignette3 input:checked + label + h3, .menu__vignette4 input:checked + label + h3 {
@@ -441,9 +442,6 @@ h2 {
   .favorite {
     position: relative;
     bottom: 27px; }
-
-  .section__container input:checked + label .menu__vignette1, .section__container input:checked + label .menu__vignette2, .section__container input:checked + label .menu__vignette3, .section__container input:checked + label .menu__vignette4, .section__container input:checked + label .menu__vignette5, .section__container input:checked + label .menu__vignette6, .section__container input:checked + label .menu__vignette7, .section__container input:checked + label .menu__vignette8, .section__container input:checked + label .menu__vignette9, .section__container input:checked + label .menu__vignette10 {
-    width: 83%; }
 
   .checkbox {
     width: 62px; } }
@@ -656,12 +654,13 @@ figcaption {
 
   .restaurants a {
     display: block; }
-    .restaurants a:hover {
-      transform: scale(1.05); }
 
   .restaurants__vignette {
     width: 240px;
-    height: 165px; }
+    height: 165px;
+    transition: all 300ms; }
+    .restaurants__vignette:hover {
+      transform: scale(1.05); }
 
   .restaurants__vignette__picture {
     width: 240px;
