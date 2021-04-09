@@ -1,13 +1,13 @@
-@import "utils/functions";
-@import "utils/variables";
-@import "base/fonts";
-@import "base/icons";
-@import "layouts/header";
-@import "layouts/footer";
-@import "components/buttons";
-@import "components/spinner";
-@import "pages/index";
-@import "pages/menu";
+@import "./utils/functions";
+@import "./utils/variables";
+@import "./base/fonts";
+@import "./base/icons";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./components/buttons";
+@import "./components/spinner";
+@import "./pages/index";
+@import "./pages/menu";
 
 
 @media screen and (max-width: 480px) /* Smartphones */

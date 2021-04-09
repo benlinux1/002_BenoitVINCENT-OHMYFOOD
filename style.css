@@ -612,7 +612,7 @@ figcaption {
 
 @media screen and (min-width: 481px) {
   .search button {
-    margin-top: 0px; }
+    margin-top: 15px; }
 
   .method {
     margin-bottom: 10px; }
