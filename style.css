@@ -512,7 +512,7 @@ h2 {
   /* utile pour écrans <280px */
   align-items: center;
   align-content: center;
-  width: 340px;
+  width: 80%;
   border-radius: 20px 20px;
   background-color: #f2f2f2;
   box-shadow: 3px 3px 3px #d3cccc; }
@@ -656,10 +656,11 @@ figcaption {
 
   .restaurants a {
     display: inline-block; }
-
-  .restaurants__vignette {
-    width: 240px;
-    height: 165px; }
+    .restaurants a:hover {
+      transform: scale(1.05); }
+    .restaurants a .restaurants__vignette {
+      width: 240px;
+      height: 165px; }
 
   .restaurants__vignette__picture {
     width: 240px;
