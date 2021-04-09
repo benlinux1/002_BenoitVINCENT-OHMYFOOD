@@ -217,15 +217,15 @@ figcaption {
     }
 
     .restaurants a {
-        display: inline-block;
+        display: block;
         &:hover {
             transform: scale(1.05);
+        }
     }
 
     .restaurants__vignette {
         width: 240px;
         height: 165px;
-        }
     }
 
     .restaurants__vignette__picture {

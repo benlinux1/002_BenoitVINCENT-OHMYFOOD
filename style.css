@@ -655,12 +655,13 @@ figcaption {
     margin-top: 20px; }
 
   .restaurants a {
-    display: inline-block; }
+    display: block; }
     .restaurants a:hover {
       transform: scale(1.05); }
-    .restaurants a .restaurants__vignette {
-      width: 240px;
-      height: 165px; }
+
+  .restaurants__vignette {
+    width: 240px;
+    height: 165px; }
 
   .restaurants__vignette__picture {
     width: 240px;
