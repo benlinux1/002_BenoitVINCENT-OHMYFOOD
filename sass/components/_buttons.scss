@@ -140,8 +140,7 @@
     label {
         display: block;
         width: 100%;
-        height: 68px;
-        z-index: 5;
+        height: 100%;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -190,7 +189,6 @@
 }
 
 .checkok {
-    margin: auto;
     width: 25px;
     filter: invert(100%) sepia(0%) saturate(7449%) hue-rotate(71deg) brightness(107%) contrast(105%);
     transition: all 300ms ease-in-out;
