@@ -479,16 +479,22 @@ h2 {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0px; }
+  top: 0px;
+  background-color: grey; }
 
-.loading__spinner {
+#loading-spinner {
   opacity: 0;
-  width: 50%;
+  font-size: 100px;
   margin: auto;
-  animation: loading-spinner 1200ms 100ms 4 forwards; }
+  color: transparent;
+  font-weight: bold;
+  background: linear-gradient(#FF79DA, 75%, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  animation: loading-spinner 3000ms 100ms forwards; }
 
 @media screen and (min-width: 481px) {
-  .loading__spinner {
+  #loading-spinner {
     position: relative;
     bottom: 200px;
     width: 40%; } }
