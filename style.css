@@ -13,16 +13,16 @@
 @keyframes apparition-prog {
   0% {
     opacity: 0;
-    transform: translateY(10px); }
+    transform: translateY(20px); }
   25% {
     opacity: 0.25;
-    transform: translateY(7.5px); }
+    transform: translateY(15px); }
   50% {
     opacity: 0.5;
-    transform: translateY(5px); }
+    transform: translateY(10px); }
   75% {
     opacity: 0.75;
-    transform: translateY(2.5px); }
+    transform: translateY(5px); }
   100% {
     opacity: 1;
     transform: translateY(0px); } }
@@ -136,11 +136,11 @@
   10% {
     transform: translateX(400px); }
   20% {
-    transform: translateX(50px); }
+    transform: translateX(100px); }
   40% {
-    transform: translateX(10px); }
+    transform: translateX(50px); }
   50% {
-    transform: translateX(0px); }
+    transform: translateX(20px); }
   100% {
     transform: translateX(0px); } }
 /* shrikhand-regular */
@@ -403,7 +403,8 @@ h2 {
   float: right;
   position: relative;
   bottom: 170px;
-  left: 35px; }
+  left: 35px;
+  cursor: pointer; }
   .new span {
     margin: auto; }
 
@@ -537,8 +538,7 @@ h2 {
   border-radius: 20px 20px;
   background-color: #f2f2f2;
   position: relative;
-  box-shadow: 3px 3px 3px #d3cccc;
-  transition: opacity 50ms ease; }
+  box-shadow: 3px 3px 3px #d3cccc; }
   .step::after {
     content: "";
     background-color: #FF79DA;
@@ -549,7 +549,8 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 20px 20px;
-    z-index: 0; }
+    z-index: 0;
+    transition: opacity 300ms; }
   .step__name {
     margin-left: 40px;
     z-index: 1; }
@@ -604,7 +605,6 @@ h2 {
   margin-top: 0px; }
 
 figure {
-  width: 100%;
   display: inline-block;
   margin-top: 0px;
   margin-left: 0px;
@@ -621,8 +621,7 @@ figure > img {
   object-position: bottom center; }
 
 figcaption {
-  margin-left: 10px;
-  width: 100%; }
+  margin-left: 10px; }
 
 #resto2 {
   object-position: 50% 60%; }
@@ -657,17 +656,16 @@ figcaption {
     margin-top: 0px;
     z-index: 1; }
 
-  .step, .step--mod {
+  .step {
     width: 230px;
     min-width: 230px;
     margin-left: 0px;
     margin-bottom: 0px;
     text-align: center; }
-    .step__icon, .step--mod__icon {
+    .step__icon {
       margin-left: 25px; }
-    .step__name, .step--mod__name {
-      margin-left: 12px;
-      width: 160px; }
+    .step__name {
+      margin-left: 20px; }
 
   .restaurants__container {
     display: flex;
@@ -682,11 +680,27 @@ figcaption {
     display: block; }
 
   .restaurants__vignette {
+    position: relative;
+    top: 0px;
+    left: 0px;
     width: 240px;
     height: 165px;
-    transition: all 300ms; }
-    .restaurants__vignette:hover {
-      transform: scale(1.05); }
+    background-color: #fff;
+    z-index: 0; }
+    .restaurants__vignette::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      background-color: #FF79DA;
+      border-radius: 15px 15px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 300ms; }
+    .restaurants__vignette:hover::after {
+      opacity: 0.2; }
 
   .restaurants__vignette__picture {
     width: 240px;
