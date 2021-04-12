@@ -109,12 +109,15 @@
     margin-bottom: 15px;
     &__vignette {
         width: 95%;
-        display: inline-block;
+        display: block;
         background-color: #fff;
         border-radius: 15px 15px;
         margin-bottom: 15px;
         padding-bottom: 5px;
         @include box-shadow;
+        position: relative;
+        top: 0px;
+        left: 0px;
     }
 }
 
@@ -128,11 +131,13 @@
 
 .restaurants a {
     text-decoration: none;
-    margin-top: 0px;
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 figure {
-    display: inline-block;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
