@@ -25,13 +25,14 @@
             <!-- Search Section -->
             <section class="search">
                 <div class="search__bar">
-                    <img class="icon" src="images/icons/position.svg" alt="city_search">
+                    <i class="fas fa-map-marker-alt"></i>
                     <form class="search__form" method="post" id="city" action="ville.php">
                         <label for="City"></label>
                         <input type="search" id="City" name="City" placeholder="Paris, Belleville" autofocus/>
                     </form>
                 </div>
 
+                <!-- Description de l'entreprise -->
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                 <button class="button" type="submit" form="city" value="city" onclick="window.location.href = '#restaurants';">
@@ -49,7 +50,7 @@
                             <span class="step__number__1">1</span>
                         </div>
                         <div class="step">
-                            <i class="fas fa-mobile-alt"></i>
+                            <i class="fas fa-mobile-alt" id="mobile"></i>
                             <p class="step__name">Choisissez un restaurant</p>
                         </div>
                     </div>
@@ -59,7 +60,7 @@
                             <span class="step__number__2">2</span>
                         </div>
                         <div class="step">
-                            <i class="fas fa-list-ul"></i>  
+                            <i class="fas fa-list-ul" id="list"></i>  
                             <p class="step__name">Composez votre menu</p>
                         </div>
                     </div>
@@ -68,8 +69,8 @@
                         <div class="step__number">
                             <span class="step__number__3">3</span>
                         </div>
-                        <div class="step" id="step-colored">
-                            <i class="fas fa-store"></i>
+                        <div class="step">
+                            <i class="fas fa-store" id="store"></i>
                             <p class="step__name">Dégustez au restaurant</p>
                         </div>
                     </div>
@@ -84,7 +85,7 @@
                 <div class="restaurants__container">
                 <!-- Restaurant 1 - La Palette du Goût-->
                     <div class="restaurants__vignette">
-                        <a href="menu1.html">
+                        <a href="menu1.html"> <!-- Vignette cliquable -->
                             <figure title="La Palette du goût">
                                 <img class="restaurants__vignette__picture" src="images/restaurants/la_palette_du_gout.jpg" alt="restaurant_la_palette_du_gout_paris">
                                 <figcaption>La palette du goût</figcaption>
@@ -104,7 +105,7 @@
 
                     <!-- Restaurant 2 - La Noté enchantée -->
                     <div class="restaurants__vignette">
-                        <a href="menu2.html">
+                        <a href="menu2.html"> <!-- Vignette cliquable -->
                             <figure title="La Note enchantée">
                                 <img class="restaurants__vignette__picture" id="resto2" src="images/restaurants/la_note_enchantee.jpg" alt="restaurant_la_note_enchantee_paris">
                                 <figcaption>La note enchantée</figcaption>
@@ -124,7 +125,7 @@
 
                     <!-- Restaurant 3 - Le Délice des Sens-->
                     <div class="restaurants__vignette">
-                        <a href="menu3.html">
+                        <a href="menu3.html"> <!-- Vignette cliquable -->
                             <figure title="Le Délice des sens">
                                 <img class="restaurants__vignette__picture" src="images/restaurants/le_delice_des_sens.jpg" alt="restaurant_le_delice_des_sens_paris">
                                 <figcaption>Le délice des sens</figcaption>
@@ -140,9 +141,8 @@
                     </div>
 
                     <!-- Restaurant 4 - A la Française-->
-                    
                     <div class="restaurants__vignette">
-                        <a href="menu4.html">
+                        <a href="menu4.html"> <!-- Vignette cliquable -->
                             <figure title="&Agrave; la Française">
                                 <img class="restaurants__vignette__picture" src="images/restaurants/a_la_francaise.jpg" alt="restaurant_a_la_francaise_paris">
                                 <figcaption>&Agrave; la française</figcaption>
@@ -167,20 +167,23 @@
                     <!-- Proposer un restaurant -->
                     <li>
                         <a href="">
-                            <img class="footer__icon" src="images/icons/utensils.svg" alt="fork_knife">
+                            <i class="fas fa-utensils"></i>
                             <span>Proposer un restaurant</span>
                         </a>
                     </li>
 
+                    <!-- Devenir propriétaire -->
                     <li>
                         <a href="">
-                            <img class="footer__icon" src="images/icons/hands-helping.svg" alt="partnership">
+                            <i class="fas fa-hands-helping"></i>
                             <span>Devenir propriétaire</span>
                         </a>
                     </li>
 
+                    <!-- Mentions légales -->
                     <li><a href="">Mentions légales</a></li>
                     
+                    <!-- Contact -->
                     <li><a href="mailto:">Contact</a></li>
                 </ul>
             </footer>
