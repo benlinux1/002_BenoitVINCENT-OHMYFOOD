@@ -372,7 +372,6 @@ h2 {
         animation: check-box 200ms linear 100ms; }
 
 .checkbox {
-  float: right;
   display: flex;
   background-color: #99E2D0;
   width: 55px;
