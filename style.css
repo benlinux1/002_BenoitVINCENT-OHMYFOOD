@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Animation for check rotation */
 @keyframes check-box {
   0% {
     transform: rotate(0deg); }
@@ -10,6 +11,7 @@
     transform: rotate(270deg); }
   100% {
     transform: rotate(360deg); } }
+/* Animations for Menus */
 @keyframes apparition-prog {
   0% {
     opacity: 0;
@@ -60,6 +62,7 @@
     transform: rotate(270deg) scale(1.1); }
   100% {
     transform: rotate(360deg) scale(1); } }
+/* Animations for Favorites */
 @keyframes coloration-prog {
   0% {
     opacity: 0.3; }
@@ -250,12 +253,14 @@ h2 {
   transform: perspective(250px) translateZ(0px);
   box-shadow: 3px 3px 3px #d3cccc; }
   .button:hover, .order-button:hover {
+    /* Animation for buttons*/
     transform: perspective(300px) translateZ(4px); }
     .button:hover::after, .order-button:hover::after {
       content: "";
       opacity: 1;
       transform: scale(1.02); }
   .button::after, .order-button::after {
+    /* Mask for buttons with background color and box shadow ++*/
     content: "";
     position: absolute;
     border-radius: 20px 20px;
@@ -270,6 +275,10 @@ h2 {
     transition: all 800ms;
     box-shadow: 8px 8px 8px #d3cccc; }
 
+.order-button {
+  margin-bottom: 20px;
+  text-align: center; }
+
 .favorite {
   border: none;
   float: right;
@@ -281,10 +290,12 @@ h2 {
   right: 20px; }
 
 .favorite input, .section__container input {
+  /* Translate input box out of screen*/
   position: absolute;
   left: -9999px; }
 
 .favorite input:checked + label {
+  /* Allows click to add in favorites / to delete from favorites*/
   width: 30px; }
   .favorite input:checked + label i::before {
     opacity: 1;
@@ -293,6 +304,7 @@ h2 {
     opacity: 1; }
 
 .favorite > label > i {
+  /* Animation for favorites before / after */
   color: black;
   font-size: 20px;
   cursor: pointer; }
@@ -319,19 +331,8 @@ h2 {
     left: 1.75px;
     transition: all 1s ease; }
 
-.order-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  box-shadow: 3px 3px 3px #d3cccc; }
-
 .new {
+  /* Block "new" in restaurants cards */
   background-color: #99E2D0;
   font-family: 'roboto';
   font-weight: bold;
@@ -348,6 +349,7 @@ h2 {
     margin: auto; }
 
 .menu__vignette1 label, .menu__vignette2 label, .menu__vignette3 label, .menu__vignette4 label {
+  /* Click on restaurants articles to order menu */
   display: block;
   width: 100%;
   height: 100%;
@@ -359,6 +361,7 @@ h2 {
 
 .menu__vignette1 input:checked + label + h3, .menu__vignette2 input:checked + label + h3,
 .menu__vignette3 input:checked + label + h3, .menu__vignette4 input:checked + label + h3 {
+  /* Checkbox appears AND Reduce article's title & descritpion on click */
   width: 80%; }
   .menu__vignette1 input:checked + label + h3 + .with, .menu__vignette2 input:checked + label + h3 + .with,
   .menu__vignette3 input:checked + label + h3 + .with, .menu__vignette4 input:checked + label + h3 + .with {

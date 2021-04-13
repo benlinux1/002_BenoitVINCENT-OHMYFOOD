@@ -19,7 +19,7 @@
     transition : all 800ms;
     transform: perspective(250px) translateZ(0px);
     @include box-shadow;
-    &:hover {
+    &:hover { /* Animation for buttons*/
         transform: perspective(300px) translateZ(4px);
         &::after {
             content: "";
@@ -27,7 +27,7 @@
             transform: scale(1.02);
         }
     }
-    &::after {
+    &::after { /* Mask for buttons with background color and box shadow ++*/
         content: "";
         position: absolute;
         border-radius: 20px 20px;
@@ -44,7 +44,13 @@
     }
 }
 
-.favorite {
+.order-button
+{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.favorite { 
     border: none;
     float: right;
     margin-right: 20px;
@@ -55,12 +61,12 @@
     right: 20px;
 }
 
-.favorite input, .section__container input {
+.favorite input, .section__container input { /* Translate input box out of screen*/
     position: absolute;
     left: -9999px;
 }
 
-.favorite input:checked + label {
+.favorite input:checked + label { /* Allows click to add in favorites / to delete from favorites*/
     width: 30px;
     & i {
         &::before {
@@ -73,7 +79,7 @@
     }
 }
 
-.favorite > label > i {
+.favorite > label > i { /* Animation for favorites before / after */
     color: black;
     font-size: 20px;
     cursor: pointer;
@@ -103,21 +109,7 @@
     }
 }
 
-.order-button
-{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    @include box-shadow;
-}
-
-.new {
+.new { /* Block "new" in restaurants cards */
     background-color: $color-tertiary;
     font-family: 'roboto';
     font-weight: bold;
@@ -136,7 +128,7 @@
 }
 
 .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
-    label {
+    label { /* Click on restaurants articles to order menu */
         display: block;
         width: 100%;
         height: 100%;
@@ -150,7 +142,7 @@
  
 .menu__vignette1 input:checked + label, .menu__vignette2 input:checked + label, 
 .menu__vignette3 input:checked + label, .menu__vignette4 input:checked + label { 
-    + h3 {
+    + h3 { /* Checkbox appears AND Reduce article's title & descritpion on click */
         width: 80%;
         + .with {
             width: 80%;
@@ -166,7 +158,7 @@
 }
 
 
-.checkbox {
+.checkbox { 
     display: flex;
     background-color: $color-tertiary;
     width: 55px;
