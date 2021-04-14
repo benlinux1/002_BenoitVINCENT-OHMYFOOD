@@ -309,6 +309,7 @@ h2 {
   font-size: 20px;
   cursor: pointer; }
   .favorite > label > i::before {
+    /* Coeur contour noir */
     content: "\f004";
     color: black;
     font-size: 20px;
@@ -318,6 +319,7 @@ h2 {
     top: 0;
     left: 0px; }
   .favorite > label > i::after {
+    /* Coeur dégradé à l'intérieur */
     content: "\f004";
     background: linear-gradient(#FF79DA, 75%, #9356DC);
     font-size: 17px;
@@ -401,8 +403,8 @@ h2 {
 
 @media screen and (min-width: 481px) {
   .favorite {
-    position: relative;
-    bottom: 27px; }
+    position: absolute;
+    bottom: 12px; }
 
   .checkbox {
     width: 62px; } }
@@ -469,12 +471,6 @@ h2 {
 
 .method {
   margin-top: 20px; }
-
-.step__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px; }
 
 .step {
   display: flex;
@@ -741,8 +737,7 @@ figcaption {
 
 .menu h2 {
   border-bottom: 2px solid #99E2D0;
-  width: 40px;
-  align-self: flex-start; }
+  width: 40px; }
 
 h3 {
   margin-bottom: 0px;
@@ -796,10 +791,5 @@ h3 {
 
   .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
     width: 320px; } }
-@media screen and (max-width: 480px) {
-  #body {
-    width: 480px;
-    overflow: hidden;
-    margin: auto; } }
 
 /*# sourceMappingURL=style.css.map */
