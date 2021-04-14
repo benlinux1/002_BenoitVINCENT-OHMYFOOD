@@ -35,6 +35,17 @@
     margin-top: 20px;
 }
 
+.method__container {
+    margin: auto;
+}
+
+.step__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
 .step {
     display: flex;
     justify-content: flex-start;
