@@ -238,7 +238,7 @@ h2 {
   border-radius: 20px 20px;
   border: none;
   font-family: "roboto";
-  font-size: 0.75em;
+  font-size: 0.7em;
   font-weight: bold;
   width: 180px;
   margin-top: 20px;
@@ -275,7 +275,6 @@ h2 {
     box-shadow: 8px 8px 8px #d3cccc; }
 
 .order-button {
-  margin-bottom: 20px;
   text-align: center; }
 
 .favorite {
