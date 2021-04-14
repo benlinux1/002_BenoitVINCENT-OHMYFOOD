@@ -1,8 +1,14 @@
+header i {
+    font-size: 16px;
+    width: 16px;  
+}
+
 #mobile, #list, #store {
     font-size: 16px;
+    width: 16px;
     font-weight: bold;
     color: black;
-    margin-left: 50px;
+    margin-left: 40px;
     z-index: 1;
     position: relative;
     top: 0px;
@@ -32,6 +38,12 @@
     &::after {
         content: "\f54e";
     }
+}
+
+/* Icône légèrement + petite et tournée comme sur la maquette */
+.fas.fa-hands-helping {
+font-size: 11px;
+rotate: 350deg;
 }
 
 @media screen and (min-width: 481px) /* Tablettes */
