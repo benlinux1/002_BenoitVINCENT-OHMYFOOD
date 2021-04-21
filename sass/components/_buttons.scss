@@ -1,0 +1,198 @@
+.button, .order-button {
+    display: block;
+    background: linear-gradient(0deg, $color-primary, 40%, $color-secondary);
+    color: #fff;
+    height: 40px;
+    border-radius: 20px 20px;
+    border: none;
+    font-family: "roboto";
+    font-size: 0.75em;
+    font-weight: bold;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-shadow: 2px 1px $color-txt-secondary;
+    position: relative;
+    z-index: 1;
+    transition : all 800ms;
+    transform: perspective(250px) translateZ(0px);
+    @include box-shadow;
+    &:hover { /* Animation for buttons*/
+        transform: perspective(300px) translateZ(4px);
+        &::after {
+            content: "";
+            opacity: 1;
+            transform: scale(1.02);
+        }
+    }
+    &::after { /* Mask for buttons with background color and box shadow ++*/
+        content: "";
+        position: absolute;
+        border-radius: 20px 20px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient($color-secondary, 75%, $color-primary);
+        opacity: 0;
+        z-index: -1;
+        transform: scale(1);
+        transition: all 800ms;
+        @include box-shadow-grow;
+    }
+}
+
+.order-button
+{
+    text-align: center;
+}
+
+.favorite { 
+    border: none;
+    float: right;
+    margin-right: 20px;
+    opacity: 1;
+    z-index: 1;
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+}
+
+.favorite input, .section__container input { /* Translate input box out of screen*/
+    position: absolute;
+    left: -9999px;
+}
+
+.favorite input:checked + label { /* Allows click to add in favorites / to delete from favorites*/
+    width: 30px;
+    & i {
+        &::before {
+            opacity: 1;
+            font-size: 20px;
+        }
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.favorite > label > i { /* Animation for favorites before / after */
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    &::before { /* Coeur contour noir */
+        content: "\f004";
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0px;
+    }
+    &::after { /* Coeur dégradé à l'intérieur */
+        content: "\f004";
+        background: linear-gradient($color-secondary, 75%, $color-primary);
+        font-size: 17px;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        opacity: 0;
+        position: absolute;
+        top: 1.5px;
+        left: 1.75px;
+        transition: all 1s ease;
+    }
+}
+
+.new { /* Block "new" in restaurants cards */
+    background-color: $color-tertiary;
+    font-family: 'roboto';
+    font-weight: bold;
+    color: rgb(13, 141, 71);
+    font-size: 0.7em;
+    width: 65px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    & span {
+        margin: auto;
+    }
+}
+
+.menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
+    label { /* Click on restaurants articles to order menu */
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+        z-index: 5;
+    }
+}
+ 
+.menu__vignette1 input:checked + label, .menu__vignette2 input:checked + label, 
+.menu__vignette3 input:checked + label, .menu__vignette4 input:checked + label { 
+    + h3 { /* Checkbox appears AND Reduce article's title & descritpion on click */
+        width: 80%;
+        + .with {
+            width: 80%;
+            + .checkbox {
+                opacity: 1;
+                animation: apparition-checkbox 200ms ease-out both;
+                & .checkok {
+                    animation: check-box 200ms linear 100ms;
+                }
+            }
+        }
+    }
+}
+
+
+.checkbox { 
+    display: flex;
+    background-color: $color-tertiary;
+    width: 55px;
+    height: 68px;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    cursor: pointer;
+    &::after {
+        content: "";
+        opacity: 1;
+    }
+}
+
+.checkok {
+    width: 25px;
+    filter: invert(100%) sepia(0%) saturate(7449%) hue-rotate(71deg) brightness(107%) contrast(105%);
+    transition: all 300ms ease-in-out;
+    animation-fill-mode: both;
+}
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .favorite {
+        position: absolute;
+        bottom: 12px;
+    }
+
+    .checkbox {
+        width: 62px;
+    }
+}

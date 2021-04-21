@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css"/>
+        <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <title>Ohmyfood</title>
+        <meta name="description" content="Réservez le menu qui vous convient" />
+    </head>
+
+    <body>
+
+        <div id="bloc_page">
+  
+            <!-- Header -->
+            <header class="header">
+                <div class="header__logo">
+                    <button class="btn-return" onclick="window.location.href = 'index.html';" title="Page d'accueil"></button>
+                    <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+                </div>
+            </header>
+
+            <!-- Picture -->
+            <div class="picture">
+                <img src="images/restaurants/la_palette_du_gout.jpg" alt="Restaurant La Palette du goût">
+            </div>
+
+            <!-- Restaurant -->
+            <main class="menu">
+
+                <div class="menu__title">
+                    <h1>La Palette du goût</h1>
+                    <div class="favorite" title="Sauvegarder comme favori">
+                        <input id="heart_resto1" type="checkbox" title="Sauvegarder comme favori">
+                        <label for="heart_resto1">
+                            <i class="far fa-heart"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="menu__container">
+
+                    <!-- Section Entrées -->
+                    <section>
+                        <h2>ENTR&Eacute;ES</h2>
+                        <div class="section__container">
+                            <div class="menu__vignette1">
+                                <input id="add1" type="checkbox">
+                                <label for="add1" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Fricassée d'escargots</h3>
+                                <div class="with">
+                                    <p class="aside">Au piment d'Espelette</p>
+                                    <span class="price">25€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                            
+                            <div class="menu__vignette2">
+                                <input id="add2" type="checkbox">
+                                <label for="add2" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Foie gras de canard mi-cuit</h3>
+                                <div class="with">
+                                    <p class="aside">Et ses copeaux de truffe noire</p>
+                                    <span class="price">35€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                            
+                            <div class="menu__vignette3">
+                                <input id="add3" type="checkbox">
+                                <label for="add3" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Oeuf au plat</h3>
+                                <div class="with">
+                                    <p class="aside">Assaisonné à la truffe sur lit de caviar</p>
+                                    <span class="price">20€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </section>
+
+                    <!-- Section Plats -->
+                    <section>
+                        <h2>PLATS</h2>
+                        <div class="section__container">
+                            <div class="menu__vignette1">
+                                <input id="add4" type="checkbox">
+                                <label for="add4" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Filet de boeuf aux herbes</h3>
+                                <div class="with">
+                                    <p class="aside">Accompagné de sa ribambelle de légumes</p>
+                                    <span class="price">40€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                            
+                            <div class="menu__vignette2">
+                                <input id="add5" type="checkbox">
+                                <label for="add5" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Parmentier de queue de boeuf</h3>
+                                <div class="with">
+                                    <p class="aside">À la truffe noire sur sa purée de panais</p>
+                                    <span class="price">35€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+
+                            <div class="menu__vignette3">
+                                <input id="add6" type="checkbox">
+                                <label for="add6" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Filet de turbot</h3>
+                                <div class="with">
+                                    <p class="aside">Aux agrumes</p>
+                                    <span class="price">44€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Desserts -->
+                    <section>
+                        <h2>DESSERTS</h2>
+                        
+                        <div class="section__container">
+
+                            <div class="menu__vignette1">
+                                <input id="add7" type="checkbox">
+                                <label for="add7" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Paris-Brest</h3>
+                                <div class="with">
+                                    <p class="aside">Revisité</p>
+                                    <span class="price">18€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+
+                            
+                            <div class="menu__vignette2">
+                                <input id="add8" type="checkbox">
+                                <label for="add8" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <div class="with">
+                                    <p class="aside">Et glace à la vanille de Madagascar</p>
+                                    <span class="price">22€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+
+                            <div class="menu__vignette3">
+                                <input id="add9" type="checkbox">
+                                <label for="add9" title="Ajouter au panier / Retirer du panier"></label>
+                                <h3>Mousse au chocolat</h3>
+                                <div class="with">
+                                    <p class="aside">Au piment d'Espelette et à la truffe noire</p>
+                                    <span class="price">23€</span>
+                                </div>
+                                <div class="checkbox">
+                                    <img src="images/icons/check-circle-solid.svg" alt="Ajouté" class="checkok">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Bouton commander-->
+                <button class="order-button" type="submit" value="order">
+                    Commander
+                </button>
+
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer__logo">
+                    <img class="logo" src="images/logo/ohmyfood@2x.svg" alt="logo ohmyfood_footer">
+                </div>
+                <ul>
+                    <!-- Proposer un restaurant -->
+                    <li>
+                        <a href="">
+                            <i class="fas fa-utensils"></i>
+                            <span>Proposer un restaurant</span>
+                        </a>
+                    </li>
+
+                    <!-- Devenir propriétaire -->
+                    <li>
+                        <a href="">
+                            <i class="fas fa-hands-helping"></i>
+                            <span>Devenir propriétaire</span>
+                        </a>
+                    </li>
+
+                    <li><a href="">Mentions légales</a></li>
+                    
+                    <li><a href="mailto:">Contact</a></li>
+                </ul>
+
+            </footer>
+        </div>
+    </body>
+</html>

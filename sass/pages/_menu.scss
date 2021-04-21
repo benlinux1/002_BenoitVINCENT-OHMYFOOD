@@ -1,0 +1,157 @@
+.picture > img {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 10px;
+    object-fit: cover;
+}
+
+.menu {
+    background-color: $background-color-primary;
+    border-top-left-radius: 30px 30px;
+    border-top-right-radius: 30px 30px;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: 40px;
+}
+
+.menu section {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section__container {
+    position: relative;
+    top: 0px;
+    margin-left: 15px;
+}
+
+.menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
+    display: inline-block;
+    background-color: #fff;
+    margin-bottom: 10px;
+    width: 90%;
+    border-radius: 15px 15px;
+    padding-left: 15px;
+    @include box-shadow;
+    height: 68px;
+    cursor: pointer;
+    position: relative; /* Permet le placement du label */
+    top: 0px;
+}
+
+.menu__vignette1 {
+    animation: apparition-prog 800ms linear 400ms both;
+}
+.menu__vignette2 {
+    animation: apparition-prog 800ms linear 500ms both;
+}
+.menu__vignette3 {
+    animation: apparition-prog 800ms linear 600ms both;
+}
+.menu__vignette4 {
+    animation: apparition-prog 800ms linear 700ms both;
+}
+
+.menu__title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    & .favorite {
+        position: relative;
+        top: 0px;
+        bottom: 0px;
+        margin-right: 0px;
+    }
+}
+
+.menu h3 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+    margin-top: 12px;
+}
+
+.with {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.menu h1 {
+    font-size: x-large;
+}
+
+.menu h2 {
+    border-bottom: 2px solid $color-tertiary;
+    width: 40px;
+}
+
+h3 {
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.aside {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+}
+
+.price {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    .picture img {
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 70%;
+    }
+
+    .menu h1 {
+        font-size: xx-large;
+    }
+    .menu h2 {
+        margin-left: 0px;
+    }
+
+    .menu h3 { /* Permet ellipsis propre */
+        padding-right: 15px;
+    }
+
+    .menu__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 20px;
+    }
+
+    .menu section {
+        display: inline-block;
+        width: 335px;
+    }
+
+    .section__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .section__container {
+        margin-left: 0px;
+    }
+
+    .menu__vignette1, .menu__vignette2, .menu__vignette3, .menu__vignette4 {
+        width: 320px;
+    }
+}

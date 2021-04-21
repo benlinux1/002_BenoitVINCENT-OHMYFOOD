@@ -1,0 +1,44 @@
+.loading {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: rgb(243, 234, 234);
+    margin: auto;
+    z-index: 5;
+    animation: disparition 3000ms forwards;
+}
+
+#loading-spinner {
+    opacity: 1;
+    font-size: 80px;
+    color: transparent;
+    font-weight: bold;
+    background: linear-gradient($color-secondary, 75%, $color-primary);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    position: relative;
+    left: 0px;
+    animation: loading-spinner 400ms 100ms 7 forwards;
+}
+
+@media screen and (min-width: 481px) /* Tablettes */
+{
+    #loading-spinner {
+    font-size: 100px;
+    bottom: 200px;
+    }
+}
+
+@media screen and (min-width: 781px) /* Desktop */
+{
+    #loading-spinner {
+    font-size: 100px;
+    position: relative;
+    bottom: 80px;
+    }
+}
